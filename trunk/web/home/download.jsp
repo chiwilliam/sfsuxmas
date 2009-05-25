@@ -46,6 +46,10 @@
                             <h1>Download</h1>
                             <div id="page_body_content">
                                 
+                                <p>
+                                    For additional downloads, visit our <a href="http://code.google.com/p/sfsuxmas/downloads/list" target="_blank">Project Download Page</a>
+                                </p>
+                                
                                 <h2>xmas.war</h2>
                                 
                                 <p>

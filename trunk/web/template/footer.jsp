@@ -28,10 +28,9 @@
                 <div class="footer_content">
                     <div style="float: left;">
                         Copyright &copy; 2009. All rights reserved | Contact: b.j.dalziel [at] gmail [dot] com<br>
-                        <i>* Beta release - please <a href="https://sourceforge.net/forum/forum.php?forum_id=815038" target="_blank">report bugs</a> and come back for updates</i><br>&nbsp;<br>
+                        <i>* Beta release - please <a href="http://code.google.com/p/sfsuxmas/issues/list" target="_blank">report bugs</a> and come back for updates</i><br>&nbsp;<br>
                         <a href="../home/index.jsp">Home</a> | 
-                        <a href="https://sourceforge.net/projects/xmassfsu/" target="_blank">SourceForge Project Page</a> | 
-                        <a href="https://sourceforge.net/forum/forum.php?forum_id=815038" target="_blank">Support Forum</a>
+                        <a href="http://code.google.com/p/sfsuxmas/" target="_blank">Google Code Project</a>
                     </div>
                     <div style="text-align: right;">
                         <a href="http://tintin.sfsu.edu/" target="_blank"><img src="../resources/images/biocomputing.png" style="height: 50px; margin-right: 50px; margin-top: 15px;" alt="Biocomputing & Media Research Group"></a>
