@@ -523,7 +523,16 @@ START SIDEBAR MENU
                      */
             %>
             <tr class="<%= rowClass%>" valign="top" id="probe_row_<%= probe.getID()%>_sub_pcad">
-                <td colspan="<%= Math.max(kDB.getProbeDataTypes().size(), 1)%>" id="probe_cell_<%= probe.getID()%>_sub_pcad" style="padding: 3px;" class="note"></td>
+                <td colspan="
+                    <%
+                if (kDB != null) {
+                    %>
+                    <%= Math.max(kDB.getProbeDataTypes().size(), 1)%>
+                    <%
+                    } else {
+                    %> 1 <%                }
+                    %>
+                    " id="probe_cell_<%= probe.getID()%>_sub_pcad" style="padding: 3px;" class="note"></td>
             </tr>
             <%
          }
