@@ -1,7 +1,5 @@
 package visualization;
 
-import com.sfsu.xmas.data_sets.ExpressionDataSet;
-import com.sfsu.xmas.trajectory_files.TrajectoryFile;
 import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
 import com.sfsu.xmas.trajectory_files.TrajectoryNode;
 import java.awt.*;
@@ -12,8 +10,8 @@ import java.util.Map.Entry;
 
 public class TreeViz extends AbstractTreeViz {
 
-    public TreeViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile trajFile) {
-        super(identifier, expressionDatabase, trajFile);
+    public TreeViz(String identifier, int expressionDataSetID, String trajFileName) {
+        super(identifier, expressionDataSetID, trajFileName);
     }
 
     @Override

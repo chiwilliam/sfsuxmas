@@ -26,16 +26,16 @@ public class FileGlobals {
     public static final String KNOWLEDGE_DATABASE = "xmas";
     
     // Prod
-    public static String DB_PROFILE = "xmas";
-    private static String FILE_ROOT = "/home/bdalziel/xmas_files/";
-    public static final String PASS = "xmas9thfloor";
-    public static final boolean SINGLE_DATASET = false;
+//    public static String DB_PROFILE = "xmas";
+//    private static String FILE_ROOT = "/home/bdalziel/xmas_files/";
+//    public static final String PASS = "xmas9thfloor";
+//    public static final boolean SINGLE_DATASET = false;
     
     // Dev
-//    public static final String DB_PROFILE = "xmas_dev";
-//    private static String FILE_ROOT = "/Users/bdalziel/Documents/xmas_files/";
-//    public static final String PASS = "xmas9thfloor";
-//    public static final boolean SINGLE_DATASET = true;
+    public static final String DB_PROFILE = "xmas_dev";
+    private static String FILE_ROOT = "/Users/bdalziel/Documents/xmas_files/";
+    public static final String PASS = "xmas9thfloor";
+    public static final boolean SINGLE_DATASET = true;
     
     // Local
 //    public static String DB_PROFILE = "xmas_dev";

@@ -31,7 +31,7 @@ public class VisualizationFactory {
     private VisualizationFactory() {
     }
 
-    public IVisualization getVisualization(String identifier, HttpServletRequest request) {
+    public synchronized IVisualization getVisualization(String identifier, HttpServletRequest request) {
         IVisualization cg = null;
 
         ExpressionDataSet eDB = SessionAttributeManager.getActivePrimaryExpressionDatabase(request);
@@ -40,18 +40,19 @@ public class VisualizationFactory {
         if (SessionAttributeManager.isProfileVisualization(request)) {
             if (SessionAttributeManager.isComparative(request) && eDBSecond != null) {
                 System.out.println("LOADING: Comparative Visualization");
-                cg = new ComparativeViz(identifier, eDB, eDBSecond, SessionAttributeManager.getActiveTrajectoryFile(request));
+                cg = new ComparativeViz(identifier, eDB.getID(), eDBSecond.getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName());
             } else {
                 System.out.println("LOADING: Exact Visualization");
-                cg = new PreciseViz(identifier, eDB, SessionAttributeManager.getActiveTrajectoryFile(request));
+                cg = new PreciseViz(identifier, eDB.getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName());
             }
         } else if (SessionAttributeManager.isHybridVisualization(request)) {
             System.out.println("LOADING: Hybrid Visualization");
-            cg = new HybridViz(identifier, eDB, SessionAttributeManager.getActiveTrajectoryFile(request));
+            cg = new HybridViz(identifier, eDB.getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName());
         } else {
             System.out.println("LOADING: Traj Visualization");
-            cg = new TreeViz(identifier, eDB, SessionAttributeManager.getActiveTrajectoryFile(request));
+            cg = new TreeViz(identifier, eDB.getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName());
         }
+        
         return cg;
     }
 }

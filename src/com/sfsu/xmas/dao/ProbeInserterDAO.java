@@ -2,6 +2,7 @@ package com.sfsu.xmas.dao;
 
 import com.sfsu.xmas.data_files.expression.FileProbes;
 import com.sfsu.xmas.data_files.expression.FileProbe;
+import com.sfsu.xmas.data_install.DataUploadGlobals;
 import com.sfsu.xmas.data_structures.expression.TimePeriods;
 import com.sfsu.xmas.globals.FileGlobals;
 import com.sfsu.xmas.monitoring.ExecutionTimer;
@@ -16,6 +17,7 @@ public class ProbeInserterDAO extends ExpressionDataSetDAO {
     private FileProbes probesToInsert;
     private int expressionCount;
     private TimePeriods tps;
+    private String method;
     private static String _InsertProbe = "INSERT INTO " + FileGlobals.EXPRESSION_DATABASE + ".probes (" +
             "probe_id, " +
             "set_id) " +
@@ -47,11 +49,13 @@ public class ProbeInserterDAO extends ExpressionDataSetDAO {
      *  and you can later poll it to see how far it
      *  has gotten.
      */
-    public ProbeInserterDAO(int dataSetID, FileProbes probes, int expressionCount, TimePeriods tps, int offset) {
+    public ProbeInserterDAO(int dataSetID, FileProbes probes, int expressionCount, TimePeriods tps, String method, int offset) {
         super(dataSetID);
         this.probesToInsert = probes;
         this.expressionCount = expressionCount;
         this.tps = tps;
+
+        this.method = method;
 
         ExecutionTimer et = new ExecutionTimer();
         et.start();
@@ -59,7 +63,7 @@ public class ProbeInserterDAO extends ExpressionDataSetDAO {
         et.end();
         System.out.println("DURATION = " + et.duration() + " in class " + this.getClass().getName() + ", INSERTING PROBES");
         et.reset();
-        
+
         et.start();
         insertProbeExpression();
         et.end();
@@ -106,7 +110,7 @@ public class ProbeInserterDAO extends ExpressionDataSetDAO {
                 sampleIndex += samples;
                 java.util.Arrays.sort(samplesFromTP);
 
-                double medianValue = median(samplesFromTP);
+                double representativeValue = reduceValues(samplesFromTP);
                 if (timePeriodIndex != 0) {
                     tpExpressionSQL.append(",");
                 } else {
@@ -117,7 +121,7 @@ public class ProbeInserterDAO extends ExpressionDataSetDAO {
                 tpExpressionSQL.append("\",");
                 tpExpressionSQL.append(String.valueOf(timePeriodIndex + 1));
                 tpExpressionSQL.append(",");
-                tpExpressionSQL.append(String.valueOf(NumberUtils.getDoubleToFourDecimalPlaces(medianValue)));
+                tpExpressionSQL.append(String.valueOf(NumberUtils.getDoubleToFourDecimalPlaces(representativeValue)));
                 tpExpressionSQL.append(", " + dataSetID + ")");
             }
 
@@ -207,7 +211,27 @@ public class ProbeInserterDAO extends ExpressionDataSetDAO {
         return rs;
     }
 
+    protected double reduceValues(double[] values) {
+        if (method.equals(DataUploadGlobals.DATA_REDUCTION_STRATEGY_MEDIAN)) {
+            return median(values);
+        } else if (method.equals(DataUploadGlobals.DATA_REDUCTION_STRATEGY_MEAN)) {
+            return mean(values);
+        } else {
+            return median(values);
+        }
+    }
 //   Precondition: Array must be sorted
+    public static double mean(double[] p) {
+        double sum = 0;  // sum of all the elements
+        if (p.length <= 0) {
+            return sum;
+        }
+        for (int i = 0; i < p.length; i++) {
+            sum += p[i];
+        }
+        return sum / p.length;
+    }
+
     public static double median(double[] m) {
         int middle = m.length / 2;  // subscript of middle element
         if (m.length % 2 == 1) {

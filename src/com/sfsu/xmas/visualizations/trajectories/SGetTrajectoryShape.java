@@ -39,7 +39,7 @@ public class SGetTrajectoryShape extends HttpServlet {
         boolean legend = !(request.getParameter("legend") == null) && Boolean.valueOf(request.getParameter("legend"));
         ServletOutputStream os = response.getOutputStream();
         try {
-            cg = new TrajectoryViz(sessionID, SessionAttributeManager.getActivePrimaryExpressionDatabase(request), SessionAttributeManager.getActiveTrajectoryFile(request), nodeID, timePeriod, width, height, legend);
+            cg = new TrajectoryViz(sessionID, SessionAttributeManager.getActivePrimaryExpressionDatabase(request).getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName(), nodeID, timePeriod, width, height, legend);
             image = cg.generateGraph();
             if (image == null) {
                 image = new BufferedImage(10, 10, BufferedImage.TYPE_INT_RGB);

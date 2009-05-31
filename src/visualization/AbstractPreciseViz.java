@@ -1,6 +1,5 @@
 package visualization;
 
-import com.sfsu.xmas.data_sets.ExpressionDataSet;
 import com.sfsu.xmas.data_sets.ExpressionDataSetMultiton;
 import com.sfsu.xmas.trajectory_files.TrajectoryNode;
 import com.sfsu.xmas.data_structures.Probe;
@@ -21,7 +20,6 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import com.sfsu.xmas.monitoring.ExecutionTimer;
-import com.sfsu.xmas.trajectory_files.TrajectoryFile;
 import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
 
 public abstract class AbstractPreciseViz extends AbstractViz {
@@ -29,12 +27,12 @@ public abstract class AbstractPreciseViz extends AbstractViz {
     float[][] nodeLocation = new float[1000][2];//need to work out how many nodes there are
     int[] lineSpacingY = new int[1000]; //need to work out how many nodes there are
 
-    public AbstractPreciseViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile trajFile) {
-        super(identifier, expressionDatabase, trajFile);
+    public AbstractPreciseViz(String identifier, int expressionDataSetID, String trajFileName) {
+        super(identifier, expressionDataSetID, trajFileName);
     }
 
-    public AbstractPreciseViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile trajFile, int width, int height) {
-        super(identifier, expressionDatabase, trajFile, width, height);
+    public AbstractPreciseViz(String identifier, int expressionDataSetID, String trajFileName, int width, int height) {
+        super(identifier, expressionDataSetID, trajFileName, width, height);
     }
 
     @Override

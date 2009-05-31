@@ -1,8 +1,6 @@
 package visualization;
 
-import com.sfsu.xmas.data_sets.ExpressionDataSet;
 import com.sfsu.xmas.data_sets.ExpressionDataSetMultiton;
-import com.sfsu.xmas.trajectory_files.TrajectoryFile;
 import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
 import com.sfsu.xmas.trajectory_files.TrajectoryNode;
 import java.awt.Color;
@@ -23,8 +21,8 @@ public abstract class AbstractTreeViz extends AbstractViz {
     int[] lineSpaceingX;
     int[] lineSpaceingY = new int[1000]; //need to work out how many nodes there are
 
-    public AbstractTreeViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile trajFile) {
-        super(identifier, expressionDatabase, trajFile);
+    public AbstractTreeViz(String identifier, int expressionDataSetID, String trajFileName) {
+        super(identifier, expressionDataSetID, trajFileName);
     }
 
     @Override
