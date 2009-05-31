@@ -1,6 +1,5 @@
 package visualization;
 
-import com.sfsu.xmas.data_sets.ExpressionDataSet;
 import com.sfsu.xmas.data_sets.ExpressionDataSetMultiton;
 import com.sfsu.xmas.trajectory_files.LeafNodes;
 import com.sfsu.xmas.data_structures.Probes;
@@ -21,7 +20,6 @@ import java.awt.font.GlyphVector;
 import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import java.io.StringWriter;
-import com.sfsu.xmas.trajectory_files.TrajectoryFile;
 import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
 
 public abstract class AbstractViz implements IVisualization {
@@ -89,26 +87,26 @@ public abstract class AbstractViz implements IVisualization {
     protected static final AlphaComposite faintComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) 0.5);
     protected static final AlphaComposite baseComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) 1);
 
-    public AbstractViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile activeTrajectoryDocument) {
+    public AbstractViz(String identifier, int expressionDataSetID, String trajFileName) {
         this.identifier = identifier;
 //        this.expressionDatabase = expressionDatabase;
 //        this.activeTrajectoryDocument = activeTrajectoryDocument;
         
-        eDBID = expressionDatabase.getID();
-        trajFN = activeTrajectoryDocument.getFileName();
+        eDBID = expressionDataSetID;
+        trajFN = trajFileName;
         setCropToData();
         setImageHeight();
         setImageWidth();
         numberOfHighProbes = HighlightManager.getUniqueInstance().getHighlighted(identifier).size();
     }
 
-    public AbstractViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile activeTrajectoryDocument, int width, int height) {
+    public AbstractViz(String identifier, int expressionDatasetID, String trajDocumentName, int width, int height) {
         this.identifier = identifier;
 //        this.expressionDatabase = expressionDatabase;
 //        this.activeTrajectoryDocument = activeTrajectoryDocument;
         
-        eDBID = expressionDatabase.getID();
-        trajFN = activeTrajectoryDocument.getFileName();
+        eDBID = expressionDatasetID;
+        trajFN = trajDocumentName;
         
         setCropToData();
 

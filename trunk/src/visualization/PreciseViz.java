@@ -1,17 +1,15 @@
 package visualization;
 
-import com.sfsu.xmas.data_sets.ExpressionDataSet;
 import com.sfsu.xmas.data_structures.Probes;
 import com.sfsu.xmas.monitoring.ExecutionTimer;
-import com.sfsu.xmas.trajectory_files.TrajectoryFile;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
 public class PreciseViz extends AbstractPreciseViz {
 
-    public PreciseViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile trajFile) {
-        super(identifier, expressionDatabase, trajFile);
+    public PreciseViz(String identifier, int expressionDataSetID, String trajFileName) {
+        super(identifier, expressionDataSetID, trajFileName);
     }
     
     public BufferedImage generateGraph() throws IOException {

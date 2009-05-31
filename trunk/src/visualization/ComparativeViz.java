@@ -1,8 +1,6 @@
 package visualization;
 
-import com.sfsu.xmas.data_sets.ExpressionDataSet;
 import com.sfsu.xmas.data_structures.Probes;
-import com.sfsu.xmas.trajectory_files.TrajectoryFile;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -14,10 +12,10 @@ public class ComparativeViz extends AbstractPreciseViz {
     protected boolean isComparative;
     protected boolean isPrimary;
 
-    public ComparativeViz(String identifier, ExpressionDataSet expressionDatabase, ExpressionDataSet secondaryDatabase, TrajectoryFile trajFile) {
-        super(identifier, expressionDatabase, trajFile);
-        this.primaryDatabase = expressionDatabase.getID();
-        this.secondaryDatabase = secondaryDatabase.getID();
+    public ComparativeViz(String identifier, int expressionDataSetID, int secondaryDataSetID, String trajFileName) {
+        super(identifier, expressionDataSetID, trajFileName);
+        this.primaryDatabase = expressionDataSetID;
+        this.secondaryDatabase = secondaryDataSetID;
     }
 
     public BufferedImage generateGraph() throws IOException {

@@ -1,7 +1,6 @@
 package visualization;
 
-import com.sfsu.xmas.data_sets.ExpressionDataSet;
-import com.sfsu.xmas.trajectory_files.TrajectoryFile;
+import com.sfsu.xmas.data_sets.ExpressionDataSetMultiton;
 import com.sfsu.xmas.trajectory_files.TrajectoryNode;
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -12,9 +11,9 @@ public abstract class AbstractHybridViz extends PreciseViz {
 
     int[] lineSpacingX;
 
-    public AbstractHybridViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile trajFile) {
-        super(identifier, expressionDatabase, trajFile);
-        lineSpacingX = new int[expressionDatabase.getNumberOfTimePeriods()];
+    public AbstractHybridViz(String identifier, int expressionDataSetID, String trajFileName) {
+        super(identifier, expressionDataSetID, trajFileName);
+        lineSpacingX = new int[ExpressionDataSetMultiton.getUniqueInstance().getDataSet(eDBID, false).getNumberOfTimePeriods()];
     }
 
     public void drawHybridNode(TrajectoryNode nd, Graphics2D g2d) throws IOException {

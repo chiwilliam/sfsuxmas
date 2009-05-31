@@ -36,7 +36,9 @@ public class SUploadData extends HttpServlet {
         databaseName = databaseName.replace(' ', '_');
 
         String databaseDescription = StringUtils.clean(request.getParameter("database_description"));
-
+        
+        String reductionStrategy = request.getParameter(DataUploadGlobals.DATA_REDUCTION_STRATEGY_KEY);
+        
         // Create Database
         DataSetDAO databasesDA = new DataSetDAO();
         int dataSetID = databasesDA.insertNewExpressionDataSet(databaseName, databaseDescription);
@@ -74,7 +76,7 @@ public class SUploadData extends HttpServlet {
         for (int i = 0; true; i++) {
             FileProbes probes = fr.getProbes(i);
             if (probes != null && probes.size() > 0) {
-                new ProbeInserterDAO(dataSetID, probes, fr.getSamples().size(), tps, i);
+                new ProbeInserterDAO(dataSetID, probes, fr.getSamples().size(), tps, reductionStrategy, i);
             } else {
                 break;
             }

@@ -62,7 +62,7 @@ public abstract class XMLFileDAO {
         return 0;
     }
 
-    private String getXpathResult(String xPath) {
+    private synchronized String getXpathResult(String xPath) {
         String result = "";
         XPath xp = factory.newXPath();
         try {
@@ -77,7 +77,7 @@ public abstract class XMLFileDAO {
         return result;
     }
 
-    public NodeList getNodeList(String xPathString) {
+    public synchronized NodeList getNodeList(String xPathString) {
         NodeList nodes = null;
         Node rootNode = getRootNode();
         try {
@@ -102,7 +102,7 @@ public abstract class XMLFileDAO {
         return nodes;
     }
 
-    public Node getRootNode() {
+    public synchronized Node getRootNode() {
         Node node = null;
         try {
             node = getDocument().getDocumentElement();

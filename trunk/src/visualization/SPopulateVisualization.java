@@ -55,12 +55,12 @@ public class SPopulateVisualization extends AbstractVisualizationLoader {
         }
 
         ImageCache ic = ImageCache.getInstance();
-        
+
         // Store key as cookie...
         String key = ic.storeImageMap(cg.getImageMap(), SessionAttributeManager.getImageMapKey(request));
-        
+
         ImageMapQueue.getInstance().imageMapIsReady(key);
-        
+
 //        HttpSession session = request.getSession(true);
 //        session.setAttribute(SessionAttributes.IMAGE_PNG, image);
 //        session.setAttribute(SessionAttributes.IMAGEMAP, cg.getImageMap());

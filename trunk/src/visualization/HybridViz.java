@@ -1,6 +1,5 @@
 package visualization;
 
-import com.sfsu.xmas.data_sets.ExpressionDataSet;
 import com.sfsu.xmas.trajectory_files.LeafNodes;
 import com.sfsu.xmas.trajectory_files.TrajectoryNode;
 import java.awt.*;
@@ -9,13 +8,12 @@ import java.io.*;
 import java.util.*;
 import java.util.ArrayList;
 import com.sfsu.xmas.monitoring.ExecutionTimer;
-import com.sfsu.xmas.trajectory_files.TrajectoryFile;
 import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
 
 public class HybridViz extends PreciseViz {
 
-    public HybridViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile trajFile) {
-        super(identifier, expressionDatabase, trajFile);
+    public HybridViz(String identifier, int expressionDataSetID, String trajFileName) {
+        super(identifier, expressionDataSetID, trajFileName);
     }
 
     @Override

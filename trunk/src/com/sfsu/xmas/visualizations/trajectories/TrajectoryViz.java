@@ -1,7 +1,5 @@
 package com.sfsu.xmas.visualizations.trajectories;
 
-import com.sfsu.xmas.data_sets.ExpressionDataSet;
-import com.sfsu.xmas.trajectory_files.TrajectoryFile;
 import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
 import visualization.*;
 import com.sfsu.xmas.trajectory_files.TrajectoryNode;
@@ -22,8 +20,8 @@ public class TrajectoryViz extends AbstractPreciseViz {
     protected int timePeriod;
     protected boolean legend;
 
-    public TrajectoryViz(String identifier, ExpressionDataSet expressionDatabase, TrajectoryFile trajFile, int nodeID, int timePeriod, int width, int height, boolean legend) {
-        super(identifier, expressionDatabase, trajFile, width, height);
+    public TrajectoryViz(String identifier, int expressionDatasetID, String trajFileName, int nodeID, int timePeriod, int width, int height, boolean legend) {
+        super(identifier, expressionDatasetID, trajFileName, width, height);
         this.legend = legend;
         this.nodeID = nodeID;
         this.timePeriod = timePeriod;

@@ -35,10 +35,8 @@ public class TrajectoryFileDAO extends XMLFileDAO {
     private int subtractiveDegreeMin;
     private int subtractiveDegreeMax;
     private double binUnit;
-    
     private int[][] maxTrajectories;
-    private Document doc;
-
+//    private Document doc;
     public TrajectoryFileDAO(String name, int parentDB) {
         super(name, parentDB);
         numberOfTimePeriods = ExpressionDataSetMultiton.getUniqueInstance().getDataSet(parentDB, false).getNumberOfTimePeriods();
@@ -85,14 +83,15 @@ public class TrajectoryFileDAO extends XMLFileDAO {
         NodeList leaves = getNodeListForXpath(leafFilter);
         return new LeafNodes(identifier, leaves, numberOfTimePeriods);
     }
+    
     protected HashMap<String, NodeList> xPathResultCache = new HashMap<String, NodeList>();
 
     protected synchronized NodeList getNodeListForXpath(String xPath) {
         NodeList leaves = null;
-        if (xPathResultCache.containsKey(xPath)) {
-            System.out.println(this.getClass().getName() + ", XPATH cache kicked in for: " + xPath);
-            return xPathResultCache.get(xPath);
-        } else {
+//        if (xPathResultCache.containsKey(xPath)) {
+//            System.out.println(this.getClass().getName() + ", XPATH cache kicked in for: " + xPath);
+//            return xPathResultCache.get(xPath);
+//        } else {
             try {
                 javax.xml.xpath.XPathFactory xf = XPathFactory.newInstance();
                 XPath xp = xf.newXPath();
@@ -104,17 +103,17 @@ public class TrajectoryFileDAO extends XMLFileDAO {
             } catch (XPathExpressionException ex) {
                 Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
             }
-            if (xPathResultCache.size() > 50) {
-                // Don't want to blow out memory saving these things
-                System.out.println(this.getClass().getName() + ": Cache reset");
-                xPathResultCache = new HashMap<String, NodeList>();
-            }
-            xPathResultCache.put(xPath, leaves);
-        }
+//            if (xPathResultCache.size() > 1) {
+//                // Don't want to blow out memory saving these things
+//                System.out.println(this.getClass().getName() + ": Cache reset");
+//                xPathResultCache = new HashMap<String, NodeList>();
+//            }
+//            xPathResultCache.put(xPath, leaves);
+//        }
         return leaves;
     }
 
-    public TreeMap<Integer, HashMap<Integer, TrajectoryNode>> getTrajectoriesRankedByVolatility(String identifier) {
+    public synchronized  TreeMap<Integer, HashMap<Integer, TrajectoryNode>> getTrajectoriesRankedByVolatility(String identifier) {
         LeafNodes trajectories = getLeafNodes(identifier);
         HashMap<Integer, HashMap<Integer, TrajectoryNode>> ordered = new HashMap<Integer, HashMap<Integer, TrajectoryNode>>();
         for (int i = 0; i < trajectories.size(); i++) {
@@ -133,7 +132,7 @@ public class TrajectoryFileDAO extends XMLFileDAO {
         return tm;
     }
 
-    public TreeMap<Integer, HashMap<Integer, TrajectoryNode>> getTrajectoriesRankedByTrend(String idendtifier) {
+    public synchronized  TreeMap<Integer, HashMap<Integer, TrajectoryNode>> getTrajectoriesRankedByTrend(String idendtifier) {
         LeafNodes trajectories = getLeafNodes(idendtifier);
 
         HashMap<Integer, HashMap<Integer, TrajectoryNode>> ordered = new HashMap<Integer, HashMap<Integer, TrajectoryNode>>();
@@ -376,26 +375,31 @@ public class TrajectoryFileDAO extends XMLFileDAO {
         return lns.size();
     }
 
-    protected Document getDocument() {
-        if (doc == null) {
-            DOMParser parser = new DOMParser();
-            try {
-                String filePath = FileGlobals.getRoot() + ExpressionDataSetMultiton.getUniqueInstance().getDataSet(parentDataSetID, false).getName() + File.separatorChar + fileName + FileGlobals.XML_FILE_EXTENSION;
-                if (new File(filePath).exists()) {
-                    parser.parse(filePath);
-                } else {
-                    System.err.println(TrajectoryFileFactory.class.getName() + ": File not found at path = " + filePath);
-                    return null;
-                }
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(TrajectoryFileFactory.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SAXException ex) {
-                Logger.getLogger(TrajectoryFileFactory.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(TrajectoryFileFactory.class.getName()).log(Level.SEVERE, null, ex);
+    protected synchronized Document getDocument() {
+        ExecutionTimer et = new ExecutionTimer();
+        et.start();
+        Document doc = null;
+        DOMParser parser = new DOMParser();
+        try {
+            String filePath = FileGlobals.getRoot() + ExpressionDataSetMultiton.getUniqueInstance().getDataSet(parentDataSetID, false).getName() + File.separatorChar + fileName + FileGlobals.XML_FILE_EXTENSION;
+            if (new File(filePath).exists()) {
+                parser.parse(filePath);
+            } else {
+                System.err.println(TrajectoryFileFactory.class.getName() + ": File not found at path = " + filePath);
+                return null;
             }
-            doc = parser.getDocument();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TrajectoryFileFactory.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SAXException ex) {
+            Logger.getLogger(TrajectoryFileFactory.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(TrajectoryFileFactory.class.getName()).log(Level.SEVERE, null, ex);
         }
+        doc = parser.getDocument();
+        
+        et.end();
+        System.out.println(this.getClass().getSimpleName() + ": DURATION " + et.duration() + " Getting Trajectory Document");
+        
         return doc;
     }
 }
