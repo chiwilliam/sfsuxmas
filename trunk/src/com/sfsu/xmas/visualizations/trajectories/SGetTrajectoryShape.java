@@ -14,15 +14,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class SGetTrajectoryShape extends HttpServlet {
-   
+
     /** 
-    * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
-    * @param request servlet request
-    * @param response servlet response
-    */
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
+     * @param request servlet request
+     * @param response servlet response
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-        
+            throws ServletException, IOException {
+
         response.setContentType("image/png");
         TrajectoryViz cg = null;
         BufferedImage image = null;
@@ -31,7 +31,7 @@ public class SGetTrajectoryShape extends HttpServlet {
         if (sessionID == null) {
             response.addCookie(new YearLongCookie(SessionAttributes.SESSION_IDENTIFIER, ServletUtil.getNewSessionID(request)));
         }
-        
+
         int nodeID = Integer.parseInt(request.getParameter("nodeID"));
         int timePeriod = Integer.parseInt(request.getParameter("timePeriod"));
         int width = Integer.parseInt(request.getParameter("width"));
@@ -47,40 +47,41 @@ public class SGetTrajectoryShape extends HttpServlet {
             ImageIO.write(image, "png", os);
         } finally {
             os.close();
-            image.flush();
+            if (image != null) {
+                image.flush();
+            }
             os = null;
             image = null;
             cg = null;
         }
-        
-    } 
+
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /** 
-    * Handles the HTTP <code>GET</code> method.
-    * @param request servlet request
-    * @param response servlet response
-    */
+     * Handles the HTTP <code>GET</code> method.
+     * @param request servlet request
+     * @param response servlet response
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-        processRequest(request, response);
-    } 
-
-    /** 
-    * Handles the HTTP <code>POST</code> method.
-    * @param request servlet request
-    * @param response servlet response
-    */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
     /** 
-    * Returns a short description of the servlet.
-    */
+     * Handles the HTTP <code>POST</code> method.
+     * @param request servlet request
+     * @param response servlet response
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /** 
+     * Returns a short description of the servlet.
+     */
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }

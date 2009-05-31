@@ -70,7 +70,9 @@ public class SPopulateVisualization extends AbstractVisualizationLoader {
             ImageIO.write(image, "png", os);
         } finally {
             os.close();
-            image.flush();
+            if (image != null) {
+                image.flush();
+            }
             vizFact = null;
             cg = null;
             image = null;
