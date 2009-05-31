@@ -1,6 +1,7 @@
 <%@page import="com.sfsu.xmas.globals.*"%>
 <%@page import="java.io.File"%>
 <%@page import="com.sfsu.xmas.dao.*"%>
+<%@page import="com.sfsu.xmas.data_install.*"%>
 
 <%@ include file="../template/file_header.jsp" %>
 
@@ -203,6 +204,15 @@
                                             <input type="button" value="Go" onclick="return get_time_period_descriptors();" />
                                         </p>
                                         <div id="timePeriodDescriptor"></div>
+                                    </div>
+                                    
+                                    <h3>How do you want to reduce your data?</h3>
+                                    <div class="indented_div">
+                                        <p>
+                                            Reduction method: <br>
+                                            <input type="radio" name="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_KEY %>" value="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_MEDIAN %>" checked> Median<br>
+                                                <input type="radio" name="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_KEY %>" value="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_MEAN %>"> Mean<br>
+                                        </p>
                                     </div>
                                     
                                     <div id="intall_button" style="display: none;">
