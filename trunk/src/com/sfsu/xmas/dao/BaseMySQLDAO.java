@@ -51,7 +51,7 @@ public abstract class BaseMySQLDAO {
         }
     }
 
-    protected int executeSQLGetInsertID(String sql) {
+    protected synchronized int executeSQLGetInsertID(String sql) {
         executeSQL(sql);
         int index = 0;
         for (int i = 0; i < 5; i++) {
