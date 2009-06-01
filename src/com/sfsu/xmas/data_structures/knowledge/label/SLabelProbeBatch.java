@@ -51,7 +51,7 @@ public class SLabelProbeBatch extends HttpServlet {
             if (labelName != null && !labelName.equals("")) {
                 KnowledgeDataSet kDB = SessionAttributeManager.getActiveKnowledgeLibrary(request);
                 labelID = kDB.addLabel(labelName, labelDescription);
-                validLabel = labelID >= 0;
+                validLabel = (labelID >= 0);
             } else {
                 validLabel = false;
             }
