@@ -129,7 +129,7 @@
                    alt="Administer XMAS" 
                    title="Administer XMAS">Admin</a>
             </li>
-            <% 
+            <%
             if (parentPage.equals("kegg")) {%>
             <li>
                 <a href="../util/admin.jsp" 
@@ -189,6 +189,12 @@
                    id="top_sub_nav_team"
                    alt="Meet the XMAS Team" 
                    title="Meet the XMAS Team">Team</a>
+            </li>
+            <li>
+                <a href="../home/videos.jsp" 
+                   id="top_sub_nav_videos"
+                   alt="See XMAS related Videos" 
+                   title="See XMAS related Videos">Videos</a>
             </li>
         </ul>
         <%        } else if (parentPage.equals(
