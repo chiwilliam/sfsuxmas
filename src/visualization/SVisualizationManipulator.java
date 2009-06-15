@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -80,6 +80,16 @@ public class SVisualizationManipulator extends HttpServlet {
                 value = !Boolean.parseBoolean(cookie.getValue());
             }
             response.addCookie(new YearLongCookie(SessionAttributes.IMAGE_TYPE_COMPARATIVE, String.valueOf(value)));
+        }
+
+        propSet = !(request.getParameter(SessionAttributes.IMAGE_TYPE_SUBTRACTIVE) == null);
+        if (propSet) {
+            boolean value = true;
+            Cookie cookie = ServletUtil.getCookieFromKey(request, SessionAttributes.IMAGE_TYPE_SUBTRACTIVE);
+            if (cookie != null) {
+                value = !Boolean.parseBoolean(cookie.getValue());
+            }
+            response.addCookie(new YearLongCookie(SessionAttributes.IMAGE_TYPE_SUBTRACTIVE, String.valueOf(value)));
         }
 
         /*

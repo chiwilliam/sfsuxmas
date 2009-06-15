@@ -45,6 +45,17 @@ public class SessionAttributeManager {
         }
     }
 
+    public static boolean isSubtractive(HttpServletRequest request) {
+        String cookieKey = SessionAttributes.IMAGE_TYPE_SUBTRACTIVE;
+        Cookie cookie = ServletUtil.getCookieFromKey(request, cookieKey);
+        if (cookie != null) {
+            return Boolean.valueOf(cookie.getValue());
+        } else {
+            // Not set - default value
+            return false;
+        }
+    }
+
     /**
      * 
      * @param request
