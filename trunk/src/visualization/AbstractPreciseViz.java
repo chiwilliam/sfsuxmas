@@ -96,7 +96,7 @@ public abstract class AbstractPreciseViz extends AbstractViz {
         int highlightIndex = 0;
 
         // Empty
-        Probes probesToRenderLast = new Probes(probes.getExpressionDataSetID(), new String[0]);
+        Probes highlightedProbesToRenderLast = new Probes(probes.getExpressionDataSetID(), new String[0]);
         int[] probesToRenderLastInOrderIndex = new int[idsToHoldBack.size()];
 
         Set<Entry<String, Probe>> probeIDs = probes.entrySet();
@@ -106,7 +106,7 @@ public abstract class AbstractPreciseViz extends AbstractViz {
             Entry<String, Probe> probeEntry = it.next();
 
             if (idsToHoldBack.contains(probeEntry.getKey())) {
-                probesToRenderLast.put(probeEntry.getKey(), probeEntry.getValue());
+                highlightedProbesToRenderLast.put(probeEntry.getKey(), probeEntry.getValue());
                 probesToRenderLastInOrderIndex[highlightIndex] = probeIndex;
                 highlightIndex++;
             } else {
@@ -116,7 +116,7 @@ public abstract class AbstractPreciseViz extends AbstractViz {
         }
 
         int p2last = 0;
-        Set<Entry<String, Probe>> lastProbeIDs = probesToRenderLast.entrySet();
+        Set<Entry<String, Probe>> lastProbeIDs = highlightedProbesToRenderLast.entrySet();
         it = lastProbeIDs.iterator();
         while (it.hasNext()) {
             Entry<String, Probe> probeToRendLastEntry = it.next();
