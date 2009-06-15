@@ -11,6 +11,7 @@ import visualization.ComparativeViz;
 import visualization.HybridViz;
 import visualization.IVisualization;
 import visualization.PreciseViz;
+import visualization.SubtractiveViz;
 import visualization.TreeViz;
 
 /**
@@ -38,9 +39,16 @@ public class VisualizationFactory {
         ExpressionDataSet eDBSecond = SessionAttributeManager.getActiveSecondaryExpressionDatabase(request);
 
         if (SessionAttributeManager.isProfileVisualization(request)) {
-            if (SessionAttributeManager.isComparative(request) && eDBSecond != null) {
-                System.out.println("LOADING: Comparative Visualization");
-                cg = new ComparativeViz(identifier, eDB.getID(), eDBSecond.getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName());
+            if ((SessionAttributeManager.isComparative(request) || SessionAttributeManager.isSubtractive(request))
+                 && eDBSecond != null) {
+                if(SessionAttributeManager.isComparative(request)){
+                    System.out.println("LOADING: Comparative Visualization");
+                    cg = new ComparativeViz(identifier, eDB.getID(), eDBSecond.getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName());
+                }
+                else if(SessionAttributeManager.isSubtractive(request)){
+                    System.out.println("LOADING: Subtractive Comparative Visualization");
+                    cg = new SubtractiveViz(identifier, eDB.getID(), eDBSecond.getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName());
+                }
             } else {
                 System.out.println("LOADING: Exact Visualization");
                 cg = new PreciseViz(identifier, eDB.getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName());

@@ -18,6 +18,7 @@ public class SessionAttributes {
 //    public static final String COMPARATIVE;
 //    public static final String PRIMARY_EXPRESSION_DATABASE_ACTIVE;
     public static final String IMAGE_TYPE_COMPARATIVE = "comparative";
+    public static final String IMAGE_TYPE_SUBTRACTIVE = "subtractive";
     public static final String IMAGE_TYPE_TRAJECTORY = "trajectory";
     public static final String IMAGE_TYPE_PROFILE = "profile";
     public static final String IMAGE_TYPE_HYBRID = "hybrid";

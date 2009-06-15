@@ -38,6 +38,7 @@ public class ComparativeViz extends AbstractPreciseViz {
         eDBID = secondaryDatabase;
         probes = getProbes(probeIDs);
         if (probes.size() > 0) {
+
             g2d.setStroke(compStroke);
             renderProbes(g2d, probes, null);
             g2d.setStroke(baseStroke);
