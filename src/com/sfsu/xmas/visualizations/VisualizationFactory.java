@@ -57,7 +57,7 @@ public class VisualizationFactory {
                     String cookieKey = SessionAttributes.IMAGE_TYPE_DATASELECTOR;
                     Cookie cookie = ServletUtil.getCookieFromKey(request, cookieKey);
                     //view secondary dataset
-                    if(cookie.getValue().equals("false")){
+                    if(cookie.getValue().equals("true")){
                         cg = new PreciseViz(identifier, eDBSecond.getID(), SessionAttributeManager.getActiveTrajectoryFile(request).getFileName());
                     }
                     //view primary dataset
