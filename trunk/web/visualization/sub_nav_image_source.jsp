@@ -57,19 +57,21 @@
 
 <%
     String hidden = "inline";
-    if (!SessionAttributeManager.isProfileVisualization(request)) {
+    if (!SessionAttributeManager.isProfileVisualization(request)){
         hidden = "none;";
-    }
-
-    String buttonText = "Compare Primary to Secondary";
-    if (SessionAttributeManager.isComparative(request)) {
-        buttonText = "Stop Comparison";
-    }
-
+    };
     String subtractiveButtonText = "Subtractive Analysis";
-    if (SessionAttributeManager.isSubtractive(request)) {
+    if (SessionAttributeManager.isSubtractive(request)){
         subtractiveButtonText = "Undo Subtraction";
-    }
+    };
+    String buttonText = "Compare Primary to Secondary";
+    if (SessionAttributeManager.isComparative(request)){
+        buttonText = "Stop Comparison";
+    };
+    String dataselectorButtonText = "View Secondary Dataset";
+    if (SessionAttributeManager.isDataSelector(request)){
+        dataselectorButtonText = "View Primary Dataset";
+    };
 %>
 
 <div style="font-size: 11px; float: right; display: <%= hidden%>;">
@@ -78,7 +80,8 @@
 </div>
 <div style="margin: 10px 0; display: <%= hidden%>;">
     <input type="button" onclick="image_type_switch('../SVisualizationManipulator?comparative', 'comparative');" id="button_comparative" value="<%= buttonText%>" />
-    <input type="button" onclick="image_type_switch('../SVisualizationManipulator?subtractive', 'subtractive');" id="button_subtrative" value="<%= subtractiveButtonText%>" />
+    <input type="button" onclick="image_type_switch('../SVisualizationManipulator?subtractive', 'subtractive');" id="button_subtractive" value="<%= subtractiveButtonText%>" />
+    <input type="button" onclick="image_type_switch('../SVisualizationManipulator?dataselector', 'dataselector');" id="button_dataselector" value="<%= dataselectorButtonText%>" />
 </div>
 
 <% if (false) {%>

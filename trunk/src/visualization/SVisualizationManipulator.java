@@ -92,6 +92,16 @@ public class SVisualizationManipulator extends HttpServlet {
             response.addCookie(new YearLongCookie(SessionAttributes.IMAGE_TYPE_SUBTRACTIVE, String.valueOf(value)));
         }
 
+        propSet = !(request.getParameter(SessionAttributes.IMAGE_TYPE_DATASELECTOR) == null);
+        if (propSet) {
+            boolean value = true;
+            Cookie cookie = ServletUtil.getCookieFromKey(request, SessionAttributes.IMAGE_TYPE_DATASELECTOR);
+            if (cookie != null) {
+                value = !Boolean.parseBoolean(cookie.getValue());
+            }
+            response.addCookie(new YearLongCookie(SessionAttributes.IMAGE_TYPE_DATASELECTOR, String.valueOf(value)));
+        }
+
         /*
          * Image type
          */
