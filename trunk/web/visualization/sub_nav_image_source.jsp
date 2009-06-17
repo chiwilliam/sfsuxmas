@@ -76,9 +76,9 @@
 
 <div style="font-size: 11px; float: right; display: <%= hidden%>;">
     <b>Primary &quot;<i><%= aDB.getName()%></i>&quot;</b>: Showing <b><%= aDB.getProbes(td.getProbes(SessionAttributeManager.getSessionID(request)), true).size()%></b> of <%= aDB.getNumberOfProbes()%> probes <br />
-    <b>Secondary &quot;<i><%= sDB.getName()%></i>&quot;</b>: Shares <b><%= sDB.getProbes(td.getProbes(SessionAttributeManager.getSessionID(request)), true).size()%></b> probes with this analysis 
+    <b>Secondary &quot;<i><%= sDB.getName()%></i>&quot;</b>: Shares <b><%= sDB.getProbes(td.getProbes(SessionAttributeManager.getSessionID(request)), true).size()%></b> probes with this analysis <br />
 </div>
-<div style="margin: 10px 0; display: <%= hidden%>;">
+<div style="float:left; margin: 10px 0px; display: <%= hidden%>;">
     <input type="button" onclick="image_type_switch('../SVisualizationManipulator?comparative', 'comparative');" id="button_comparative" value="<%= buttonText%>" />
     <input type="button" onclick="image_type_switch('../SVisualizationManipulator?subtractive', 'subtractive');" id="button_subtractive" value="<%= subtractiveButtonText%>" />
     <input type="button" onclick="image_type_switch('../SVisualizationManipulator?dataselector', 'dataselector');" id="button_dataselector" value="<%= dataselectorButtonText%>" />
