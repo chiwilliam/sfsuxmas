@@ -56,6 +56,17 @@ public class SessionAttributeManager {
         }
     }
 
+    public static boolean isDataSelector(HttpServletRequest request) {
+        String cookieKey = SessionAttributes.IMAGE_TYPE_DATASELECTOR;
+        Cookie cookie = ServletUtil.getCookieFromKey(request, cookieKey);
+        if (cookie != null) {
+            return Boolean.valueOf(cookie.getValue());
+        } else {
+            // Not set - default value
+            return false;
+        }
+    }
+
     /**
      * 
      * @param request

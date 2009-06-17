@@ -17,7 +17,7 @@ function image_type_switch(url, button_name, loading) {
                 
                 ref_viz();
                 var sourceButs = document.getElementById('source_buts');
-                if (button_name != null && button_name != 'trajectory' && button_name != 'profile' && button_name != 'comparative') {
+                if (button_name != null && button_name != 'trajectory' && button_name != 'profile' && button_name != 'comparative' && button_name != 'subtractive' && button_name != 'dataselector') {
                     document.getElementById('button_collapsed').disabled = false;
                     document.getElementById('button_collapsed').style.cursor = 'pointer';
                     document.getElementById('button_collapsed').style.cursor = 'hand';
@@ -27,7 +27,8 @@ function image_type_switch(url, button_name, loading) {
                     document.getElementById('button_' + button_name).disabled = true;
                     document.getElementById('button_' + button_name).style.cursor = '';
                     document.getElementById('button_' + button_name).style.cursor = '';
-                } else if (button_name == 'trajectory' || button_name == 'profile' || button_name == 'comparative' || button_name == 'subtractive') {
+                }
+                else if (button_name == 'trajectory' || button_name == 'profile' || button_name == 'comparative' || button_name == 'subtractive' || button_name == 'dataselector') {
                     // Show button
                     if (sourceButs != null) {
                         var xhr2 = getRequest();
