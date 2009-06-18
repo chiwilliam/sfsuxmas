@@ -10,7 +10,7 @@ public class ComparativeViz extends AbstractPreciseViz {
     protected int secondaryDatabase;
     protected int primaryDatabase;
     protected boolean isComparative;
-    protected boolean isPrimary;
+//    protected boolean isPrimary;
 
     public ComparativeViz(String identifier, int expressionDataSetID, int secondaryDataSetID, String trajFileName) {
         super(identifier, expressionDataSetID, trajFileName);
@@ -31,12 +31,12 @@ public class ComparativeViz extends AbstractPreciseViz {
 //        if (isComparative) {
 //            if (isPrimary) {
         // Set to secondary and go, then reset
-
-        probes = getProbesToRender();
-        String[] probeIDs = probes.keySet().toArray(new String[0]);
+//
+//        probes = getProbesToRender();
+//        String[] probeIDs = probes.keySet().toArray(new String[0]);
 
         eDBID = secondaryDatabase;
-        probes = getProbes(probeIDs);
+        probes = getProbesToRender();
         if (probes.size() > 0) {
 
             g2d.setStroke(compStroke);
