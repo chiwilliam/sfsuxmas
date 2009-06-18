@@ -8,17 +8,29 @@ import java.io.*;
 
 public class PreciseViz extends AbstractPreciseViz {
 
-    public PreciseViz(String identifier, int expressionDataSetID, String trajFileName) {
+    protected int secondaryDatabase;
+    protected int primaryDatabase;
+    protected boolean usePrimary;
+
+    public PreciseViz(String identifier, int expressionDataSetID, int secondaryDataSetID, String trajFileName, boolean usePrimary) {
         super(identifier, expressionDataSetID, trajFileName);
+        this.primaryDatabase = expressionDataSetID;
+        this.secondaryDatabase = secondaryDataSetID;
+
+        this.usePrimary = usePrimary;
     }
-    
+
     public BufferedImage generateGraph() throws IOException {
         ExecutionTimer et = new ExecutionTimer();
         et.start();
         initialize();
 
+        if (!usePrimary) {
+            eDBID = secondaryDatabase;
+        }
+
         Probes probes = getProbesToRender();
-        
+
         // Create image
         BufferedImage image = new BufferedImage(mWidth, mHeight, BufferedImage.TYPE_INT_RGB);
         Graphics2D g2d = getVizCanvas(image);
