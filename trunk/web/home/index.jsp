@@ -90,7 +90,7 @@
                                 
                                 <h2>Software</h2>
                                 <p>
-                                    You can try XMAS online by loading some <a href="../data/your_data.jsp">preinstalled data</a>, and entering the <a href="../visualization/visualization.jsp">system</a>, or by <a href="../home/download.jsp">downloading</a> and installing XMAS locally.
+                                    <b>To download and install XMAS locally, <a href="../help/local_install.jsp">click here</a>. You can also try our on-line demo version of XMAS <a href="../visualization/visualization.jsp">here</a>, after loading <a href="../data/your_data.jsp">sample dataset(s)</a></b>
                                 </p>
                                 
                             </div>

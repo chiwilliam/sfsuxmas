@@ -40,6 +40,13 @@
                         <p><b>Email</b>: b.j.dalziel [at] gmail.com</p>
                         
                     </div>
+                    <div id="page_body_content">
+
+                        <h2>William Murad</h2>
+
+                        <p><b>Email</b>: whemurad [at] sfsu.edu</p>
+
+                    </div>
                 </div>
             </div>
         </div>

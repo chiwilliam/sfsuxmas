@@ -129,6 +129,27 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="team_member_block">
+                                    <img src="../resources/images/william.jpg" class="team_image" />
+                                    <a name="murad" />
+                                    <h3>William Murad</h3>
+                                    <div class="paper_links_block">
+                                        <span class="paper_link_title"><b>Affiliations:</b></span>
+                                        <div class="paper_links">
+                                            <ul>
+                                                <li><a href="http://cs.sfsu.edu" target="_blank">Department of Computer Science</a> at San Francisco State University</li>
+                                            </ul>
+                                        </div>
+                                        <span class="paper_link_title"><b>Links</b></span>
+                                        <div class="paper_links">
+                                            <ul>
+                                                <li>Skype: whemurad</li>
+                                                <li>MSN: whemurad@hotmail.com</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                                 
                                 <div id="ucsf" style="clear: both;">
                                     <h2 style="height: 40px;">Collaborators</h2>

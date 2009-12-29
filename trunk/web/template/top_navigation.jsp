@@ -100,16 +100,22 @@
                    title="Go to the home page">Home</a>
             </li>
             <li>
+                <a href="../help/local_install.jsp"
+                   id="top_nav_download"
+                   alt="Download and Install XMAS locally"
+                   title="Download and Install XMAS locally">Download</a>
+            </li>
+            <li>
                 <a href="../data/your_data.jsp" 
                    id="top_nav_data"
                    alt="Manage your data" 
-                   title="Manage your data">Data</a>
+                   title="Manage your data">Load Data</a>
             </li>
             <li>
                 <a href="../visualization/visualization.jsp" 
                    id="top_nav_xmas"
                    alt="Enter the Analysis Environment" 
-                   title="Enter the Analysis Environment">XMAS*</a>
+                   title="Load at least one dataset before running XMAS">Run XMAS</a>
             </li>
             <li>
                 <a href="../help/index.jsp" 
@@ -195,6 +201,16 @@
                    id="top_sub_nav_videos"
                    alt="See XMAS related Videos" 
                    title="See XMAS related Videos">Videos</a>
+            </li>
+        </ul>
+        <%                } else if (parentPage.equals("download")) {
+        %>
+        <ul id="top_sub_navigation_buttons">
+            <li>
+                <a href="../help/local_install.jsp" 
+                   id="top_sub_nav_local_install"
+                   alt="Help - Local Install" 
+                   title="Help - Local Install">Local Installation</a>
             </li>
         </ul>
         <%        } else if (parentPage.equals(
