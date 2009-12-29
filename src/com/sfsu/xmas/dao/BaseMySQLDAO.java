@@ -80,6 +80,7 @@ public abstract class BaseMySQLDAO {
             try {
                 ExecutionTimer et = new ExecutionTimer();
                 Connection conn = DBConnectionManager.getInstance().getConnection(FileGlobals.DB_PROFILE);
+
                 if (conn != null && !conn.isClosed()) {
                     Statement stmt = conn.createStatement();
                     et.start();

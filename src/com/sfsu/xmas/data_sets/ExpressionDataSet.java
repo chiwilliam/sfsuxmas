@@ -156,8 +156,13 @@ public class ExpressionDataSet extends AbstractDataSet {
     }
 
     public Probes getProbes(String identifier, boolean populateExpression) {
-        if (populateExpression && !probes.expressionsPopulated()) {
-            probes.populateTimePeriodExpressions();
+        if (populateExpression && probes != null) {
+            if(!probes.expressionsPopulated()){
+                probes.populateTimePeriodExpressions();
+            }
+        }
+        if(probes == null){
+            populateFully();
         }
         
         HashMap<String, Probe> matchingPs = new HashMap<String, Probe>();

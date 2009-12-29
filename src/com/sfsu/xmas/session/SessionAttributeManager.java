@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 public class SessionAttributeManager {
 
     public static boolean isAdmin(HttpServletRequest request) {
+
+        //To facilate XMAS use, at least until the paper gets published SET ADMIN = TRUE always
+        /*
         String cookieKey = SessionAttributes.ADMIN;
         Cookie cookie = ServletUtil.getCookieFromKey(request, cookieKey);
         if (cookie != null) {
@@ -21,6 +24,8 @@ public class SessionAttributeManager {
             // Not set - default value
             return false;
         }
+        */
+        return true;
     }
 
     public static boolean isPreserved(HttpServletRequest request) {
