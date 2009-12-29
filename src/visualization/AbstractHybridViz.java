@@ -12,7 +12,7 @@ public abstract class AbstractHybridViz extends PreciseViz {
     int[] lineSpacingX;
 
     public AbstractHybridViz(String identifier, int expressionDataSetID, String trajFileName) {
-        super(identifier, expressionDataSetID, trajFileName);
+        super(identifier, expressionDataSetID, 0, trajFileName, true);
         lineSpacingX = new int[ExpressionDataSetMultiton.getUniqueInstance().getDataSet(eDBID, false).getNumberOfTimePeriods()];
     }
 

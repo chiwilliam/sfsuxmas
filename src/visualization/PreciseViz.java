@@ -17,7 +17,13 @@ public class PreciseViz extends AbstractPreciseViz {
         this.primaryDatabase = expressionDataSetID;
         this.secondaryDatabase = secondaryDataSetID;
 
-        this.usePrimary = usePrimary;
+        if(expressionDataSetID > 0 && secondaryDataSetID > 0){
+            this.usePrimary = usePrimary;
+        }
+        else{
+            this.usePrimary = true;
+        }
+
     }
 
     public BufferedImage generateGraph() throws IOException {
