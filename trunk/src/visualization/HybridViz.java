@@ -13,7 +13,7 @@ import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
 public class HybridViz extends PreciseViz {
 
     public HybridViz(String identifier, int expressionDataSetID, String trajFileName) {
-        super(identifier, expressionDataSetID, trajFileName);
+        super(identifier, expressionDataSetID, 0, trajFileName, true);
     }
 
     @Override
