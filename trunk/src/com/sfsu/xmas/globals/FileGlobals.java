@@ -5,7 +5,7 @@ import java.io.File;
 
 public class FileGlobals {
 
-    public static final boolean PATHWAYS_ENABLED = false;//    private static String WINDOWS_FILE_ROOT = "C:\\xmas_files\\";
+    public static final boolean PATHWAYS_ENABLED = false;
     private static String EXPRESSION_DATA_SUB_DIR = "xd_expression" + File.separatorChar;
     private static String KNOWLEDGE_SUB_DIR = "xd_knowledge" + File.separatorChar;
     public static final String COLLAPSED_POSTFIX = "_collapsed";
@@ -27,7 +27,9 @@ public class FileGlobals {
     
     // Prod
     public static String DB_PROFILE = "xmas";
-    private static String FILE_ROOT = "/home/bdalziel/xmas_files/";
+
+    private static String FILE_ROOT = "undefined";
+
     public static final String PASS = "xmas9thfloor";
     public static final boolean SINGLE_DATASET = false;
     
@@ -44,6 +46,16 @@ public class FileGlobals {
 //    public static final boolean SINGLE_DATASET = true;
     
     public static String getActiveRoot() {
+
+        if(FILE_ROOT.contains("undefined") ==true){
+            String OS = java.lang.System.getProperty("os.name");
+            if(OS.contains("Windows") == true){
+                FILE_ROOT = "C:\\xmas\\xmas_files\\";
+            }
+            else{
+                FILE_ROOT = "/home/bdalziel/xmas_files/";
+            }
+        }        
         return FILE_ROOT;
     }
 
