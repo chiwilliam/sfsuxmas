@@ -69,7 +69,7 @@
                             <h1>Install Expression Data</h1>
                             <%@ include file="upload_sub_nav.jsp" %>
                             <div id="page_body_content">
-                                <FORM ACTION="../SUploadData" METHOD="POST" onSubmit="return validate_upload();">
+                                <form action="../SUploadData" method="POST" onSubmit="return validate_upload();">
                                     
                                     <%
             int numberOfFileOptions = 0;
@@ -209,9 +209,9 @@
                                     <h3>How do you want to reduce your data?</h3>
                                     <div class="indented_div">
                                         <p>
-                                            Reduction method: <br>
-                                            <input type="radio" name="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_KEY %>" value="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_MEDIAN %>" checked> Median<br>
-                                                <input type="radio" name="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_KEY %>" value="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_MEAN %>"> Mean<br>
+                                            Reduction method: <br/>
+                                            <input type="radio" name="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_KEY %>" value="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_MEDIAN %>" checked/> Median<br/>
+                                                <input type="radio" name="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_KEY %>" value="<%= DataUploadGlobals.DATA_REDUCTION_STRATEGY_MEAN %>"/> Mean<br/>
                                         </p>
                                     </div>
                                     
@@ -234,7 +234,7 @@
                                     </div>
                                     <%            }
                                     %>
-                                </FORM>
+                                </form>
                             </div>
                         </div>
                     </div>

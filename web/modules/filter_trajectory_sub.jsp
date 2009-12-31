@@ -32,7 +32,7 @@
         %>
     </p>
     
-    <FORM ACTION="../SFilterManipulator?filterType=0&subtractive" METHOD="POST" id="trajFilterForm" TARGET="_parent">
+    <form action="../SFilterManipulator?filterType=0&subtractive" method="POST" id="trajFilterForm" TARGET="_parent">
         
         <%
             int[][] existingFilters = null;
@@ -181,7 +181,7 @@
             <div class="corners_connector_bar"></div>
         </div>
         
-    </FORM>
+    </form>
 </div>
 
 <!--

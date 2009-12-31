@@ -98,7 +98,7 @@
                         
                         
                         <h2>Install Probe Attributes</h2>
-                        <FORM ACTION="../SIntegrateProbeAttributes" METHOD="POST">
+                        <form action="../SIntegrateProbeAttributes" method="POST">
                         
                                     <%
             int numberOfFileOptions = 0;
@@ -155,7 +155,7 @@
                                     <INPUT TYPE="SUBMIT" VALUE="Integrate pathway data">
                                 </p>
                             </div>
-                        </FORM>
+                        </form>
                         
                         
                         
@@ -163,7 +163,7 @@
                         
                         
                         <h2>Install Pathway Data</h2>
-                        <FORM ACTION="../SIntegratePathwayData" METHOD="POST">
+                        <form action="../SIntegratePathwayData" method="POST">
                             
                             <%
                             File[] pathwayFiles = DAOFactoryFactory.getUniqueInstance().getFileSystemDAOFactory().getDataFileDAO().getPathwayDataFiles();
@@ -211,12 +211,12 @@
                                     <INPUT TYPE="SUBMIT" VALUE="Integrate pathway data">
                                 </p>
                             </div>
-                        </FORM>
+                        </form>
                         
                         
                         
                         <h2>Install Gene Ontology Data</h2>
-                        <FORM ACTION="../SIntegrateGOData" METHOD="POST">
+                        <form action="../SIntegrateGOData" method="POST">
                             
                             <%
                             File[] goFiles = DAOFactoryFactory.getUniqueInstance().getFileSystemDAOFactory().getDataFileDAO().getGODataFiles();
@@ -264,7 +264,7 @@
                                     <INPUT TYPE="SUBMIT" VALUE="Integrate GO data">
                                 </p>
                             </div>
-                        </FORM>
+                        </form>
                         
                         <a href="../help/data_labels.jsp" 
                            class="help_button" 
@@ -281,7 +281,7 @@
                             It is possible to assign such groupings based on observations and shared characteristics within analysis. This tool provides complementary functionality to group a predefined list of probe identifiers.
                         </p>
                         
-                        <FORM name="batch_labeler_form" ACTION="../SLabelProbeBatch" METHOD="POST">
+                        <form name="batch_labeler_form" action="../SLabelProbeBatch" method="POST">
                         
                         
                         <%
@@ -391,7 +391,7 @@
                 </div>
                 <%            }
                 %>
-                </FORM>
+                </form>
                 <%            }
                 %>
                 

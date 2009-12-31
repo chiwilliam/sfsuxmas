@@ -116,7 +116,7 @@
     
     Use the summary of your data below to help you define options for file creation:
     <img src="../SDataImage" />
-    <FORM ACTION="../SMakeXMLFile" METHOD="POST" onsubmit="check_generate_file(1);">
+    <form action="../SMakeXMLFile" method="POST" onsubmit="check_generate_file(1);">
         
         <p>
             <span style="color: blue;">Minimum</span>: <b><%= df.format(minExpression)%></b> || 
@@ -169,7 +169,7 @@
         <p style="text-align: center;">
             <INPUT TYPE="SUBMIT" VALUE="Create file" id="create_file_button" />
         </p>
-    </FORM>
+    </form>
     
     <% } else {%>
     <div class="error">Corrupted data set loaded</div>

@@ -52,7 +52,7 @@
                             </div>
                             <%                        } else {
                             %>
-                            <FORM ACTION="../SUploadFile" METHOD="POST" enctype="multipart/form-data">
+                            <form action="../SUploadFile" method="POST" enctype="multipart/form-data">
                                 <%
                                 boolean errorMessageAvailable = !(request.getParameter("error") == null);
                                 if (errorMessageAvailable) {
@@ -75,7 +75,7 @@
                                     <INPUT TYPE="SUBMIT" VALUE="Import data" />
                                 </p>
                                 
-                            </FORM>
+                            </form>
                             <%
             }
                             %>

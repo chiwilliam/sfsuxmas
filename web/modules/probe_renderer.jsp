@@ -497,12 +497,12 @@ START SIDEBAR MENU
                 <td colspan="<%= Math.max(kDB.getProbeDataTypes().size(), 1)%>" style="padding: 3px;" class="note user_note">
                     <%= probeNotePrefix%><a href="javascript: void(0);" onclick="return get_probe_note_box('<%= probe.getID()%>');" class="note_toggle" id="note_toggle_<%= probe.getID()%>" style="<%= noteStyle%>"><%= probeNote%></a>
                     <div id="probe_note_<%= probe.getID()%>" style="display: none;">
-                        <FORM action="../SAddProbeNote?probe_id=<%= probe.getID()%>">
+                        <form action="../SAddProbeNote?probe_id=<%= probe.getID()%>">
                             <textarea id="probe_note_text_<%= probe.getID()%>" name="probe_note_text_<%= probe.getID()%>" wrap="virtual" rows="2" cols="30"><%= defaultProbeNote%></textarea>
                             <br>
                             <input type="button" value="Save" onclick="return save_probe_note_box('<%= probe.getID()%>');"> OR 
                             <input type="button" value="Cancel" onclick="return cancel_probe_note_box('<%= probe.getID()%>');">
-                        </FORM>
+                        </form>
                     </div>
                 </td>
             </tr>

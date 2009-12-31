@@ -79,7 +79,7 @@
 
     %>
     
-    <FORM>
+    <form>
         <div class="corners_bar">
             <div class="corners_top_left"></div>
             <div class="corners_top_right"></div>
@@ -513,6 +513,6 @@
             <div class="corners_bottom_right"></div>
             <div class="corners_connector_bar"></div>
         </div>
-    </FORM>
+    </form>
     
 </div>

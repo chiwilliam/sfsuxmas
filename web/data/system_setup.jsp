@@ -66,7 +66,7 @@
                                             <br />
                                             <pre style="text-align: center;"><%= FileGlobals.getRoot()%></pre>
                                         </p>
-                                        <FORM ACTION="../SUpdateRootDir" METHOD="POST">
+                                        <form action="../SUpdateRootDir" method="POST">
                                             <p>
                                                 <blockquote>
                                                     <div class="entry">
@@ -89,7 +89,7 @@
                                                     <li><b>Mac</b>: /Users/{your_username}/Documents/xmas_files/</li>
                                                 </ul>
                                             </p>
-                                        </FORM>
+                                        </form>
                                     </div>
                                 </div>
                                 
