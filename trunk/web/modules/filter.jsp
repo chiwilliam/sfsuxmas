@@ -45,7 +45,7 @@
             <h2>1. Choose Filter</h2>
             
             <div id="gene_filter">
-                <FORM ACTION="../SFilterManipulator?filterType=4" METHOD="POST" target="_parent">
+                <form action="../SFilterManipulator?filterType=4" method="POST" target="_parent">
                     <table>
                         <tr>
                             <th>Affymetrix Gene ID:</th>
@@ -337,7 +337,7 @@
                             <th><INPUT TYPE="SUBMIT" VALUE="Submit Filter"></th>
                         </tr>
                     </table>
-                </FORM>
+                </form>
             </div>
         </div>
         

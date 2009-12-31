@@ -54,7 +54,7 @@
                             <h1>Create a Knowledge Library</h1>
                             <%@ include file="upload_sub_nav.jsp" %>
                             <div id="page_body_content">
-                                <FORM ACTION="../SCreateNewKnowledgeDatabase" METHOD="POST" onSubmit="return validate_library_upload();">
+                                <form action="../SCreateNewKnowledgeDatabase" method="POST" onSubmit="return validate_library_upload();">
                                     
                                     <h3>Name and describe the data:</h3>
                                     <div class="indented_div">
@@ -93,7 +93,7 @@
                                         <div id="knowledge_library_creation_message"></div>
                                     </p>
                                     
-                                </FORM>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -83,7 +83,7 @@
             ProbeAttributeHeaderList headers = probes.getProbeAttributes();
                             %>
                             
-                            <FORM ACTION="../SAddAttributeLink?database_name=<%= databaseName%>" METHOD="POST">
+                            <form action="../SAddAttributeLink?database_name=<%= databaseName%>" method="POST">
                                 <p>
                                     <b>Create an attribute link</b>
                                     <small>
@@ -132,7 +132,7 @@
                                     </p>
                                     
                                 </div>
-                            </FORM>
+                            </form>
                             
                             
                             <p>
@@ -194,7 +194,7 @@
                                     <thead>
                                         <tr>
                                             
-                                            <FORM ACTION="../SUpdateAttributeUsage?database_name=<%= databaseName%>" METHOD="POST">
+                                            <form action="../SUpdateAttributeUsage?database_name=<%= databaseName%>" method="POST">
                                                 
                                                 <th><span style="font-variant: underlined;">ID:</span></th>
                                                 <%
@@ -218,7 +218,7 @@
                                                         <INPUT TYPE="SUBMIT" VALUE="Update" />
                                                     </p>
                                                 </th>
-                                            </FORM>
+                                            </form>
                                             
                                             
                                         </tr>

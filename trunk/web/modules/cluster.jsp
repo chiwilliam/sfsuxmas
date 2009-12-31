@@ -7,7 +7,7 @@
 <div class="sidebar_padding">
     <div id="sidebar_page_content">
         
-        <FORM ACTION="../SCalculateClusters" METHOD="POST" target="_parent">
+        <form action="../SCalculateClusters" method="POST" target="_parent">
             
             <p>
                 <b>Cluster</b>
@@ -73,7 +73,7 @@
                 <INPUT TYPE="SUBMIT" VALUE="Okay, Cluster!" />
             </p>
             
-        </FORM>
+        </form>
         
         <h3>Load an existing Cluster</h3>
         

@@ -42,7 +42,7 @@
                 %>
             </P>
             
-            <FORM ACTION="../SLoadDatabase?module&returnPage=files" METHOD="POST">
+            <form action="../SLoadDatabase?module&returnPage=files" method="POST">
                 
                 <div id="database_select"><img src="../resources/images/loading.gif" /></div>
                 
@@ -56,7 +56,7 @@
                 
                 <p><INPUT TYPE="submit" VALUE="Load Database" id="database_select_button" /><p>
                 
-            </FORM>
+            </form>
             
         </div>
         

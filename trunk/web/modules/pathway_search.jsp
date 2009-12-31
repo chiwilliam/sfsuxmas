@@ -25,10 +25,10 @@ START SIDEBAR MENU
             <div class="corners_inner_connector_bar"></div>
         </div>
         <div class="sidebar_tool_buttons">
-            <FORM ACTION="javascript: get(document.getElementById('pathway_search'), '../SSearchPathway', '../modules/pathway_renderer.jsp?search_results', 'search_results');" name="pathway_search" id="pathway_search">    
+            <form action="javascript: get(document.getElementById('pathway_search'), '../SSearchPathway', '../modules/pathway_renderer.jsp?search_results', 'search_results');" name="pathway_search" id="pathway_search">    
                 <INPUT type="text" name="search_term" id="search_term" size="15" value="">
                 <INPUT TYPE="SUBMIT" VALUE="Search" />
-            </FORM>
+            </form>
         </div>
         <div class="corners_bar">
             <div class="corners_inner_bottom_left"></div>

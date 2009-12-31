@@ -44,7 +44,7 @@ START SIDEBAR MENU
         </div>
         <div class="sidebar_tool_buttons">
             
-            <FORM ACTION="javascript: get(document.getElementById('probe_search'), '../SSearchProbe', '../modules/probe_renderer.jsp?results', 'search_results');" name="probe_search" id="probe_search">
+            <form action="javascript: get(document.getElementById('probe_search'), '../SSearchProbe', '../modules/probe_renderer.jsp?results', 'search_results');" name="probe_search" id="probe_search">
                 <INPUT type="text" name="search_term" id="search_term" size="15" value="<%= searchTerm%>" /> 
                 <SELECT name="search_field" id="search_field" style="width: 100px;">
                     <%
@@ -67,7 +67,7 @@ START SIDEBAR MENU
                     %>
                 </SELECT>
                 <INPUT TYPE="SUBMIT" VALUE="Search" />
-            </FORM>
+            </form>
             
         </div>
         <div class="corners_bar">

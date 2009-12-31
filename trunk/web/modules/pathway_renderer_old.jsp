@@ -140,7 +140,7 @@ END SIDEBAR MENU
 <%
 } else {
 %>
-<FORM>
+<form>
     
     <!--
     START SIDEBAR MENU
@@ -372,4 +372,4 @@ END SIDEBAR MENU
         <div class="corners_connector_bar"></div>
     </div>
     
-</FORM>
+</form>

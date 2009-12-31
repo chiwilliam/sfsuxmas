@@ -28,7 +28,7 @@
             <p>This tool enables you to tag a whole load of probes at the same time.</p>
             
             
-            <FORM ACTION="../SAnnotateBatch" METHOD="POST">
+            <form action="../SAnnotateBatch" method="POST">
                 
                 <p class="instruction">
                     1. Choose an annotation
@@ -58,7 +58,7 @@
                 <p>
                     <INPUT TYPE="SUBMIT" VALUE="Okay, tag this set" />
                 </p>
-            </FORM>
+            </form>
             
         </div>
         

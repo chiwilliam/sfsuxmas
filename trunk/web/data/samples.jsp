@@ -35,7 +35,7 @@
             Sample are described completely by a unique name, a time period assignment and a vector of probe indexed expression values.
         </p>
         <p>
-            <FORM>
+            <form>
                 <div class="corners_bar">
                     <div class="corners_top_left"></div>
                     <div class="corners_top_right"></div>
@@ -114,7 +114,7 @@
                     <div class="corners_bottom_right"></div>
                     <div class="corners_connector_bar"></div>
                 </div>
-            </FORM>
+            </form>
         </p>
     </div>
 </div>

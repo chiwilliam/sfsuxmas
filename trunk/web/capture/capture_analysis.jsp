@@ -18,7 +18,7 @@
         <div class="col_header" onclick="toggle_area('capture');" id="capture_show_hide">Capture the current analysis</div>
         <div class="indented_div">
             <div id="capture">
-                <FORM ACTION="../SCaptureAnalysis" METHOD="POST">
+                <form action="../SCaptureAnalysis" method="POST">
                     <table>
                         <tr>
                             <td>Analysis Name:</td>
@@ -48,7 +48,7 @@
                             </td>
                         </tr>
                     </table>
-                </FORM>
+                </form>
             </div>
         </div>
         

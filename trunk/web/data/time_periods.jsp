@@ -32,7 +32,7 @@
             Time periods are composed of 1 or more samples, and are represented by a single, probe indexed expression vector derived from the median expression value for each probe.
         </p>
         <p>
-            <FORM>
+            <form>
                 <div class="corners_bar">
                     <div class="corners_top_left"></div>
                     <div class="corners_top_right"></div>
@@ -109,7 +109,7 @@
                     <div class="corners_bottom_right"></div>
                     <div class="corners_connector_bar"></div>
                 </div>
-            </FORM>
+            </form>
         </p>
     </div>
 </div>
