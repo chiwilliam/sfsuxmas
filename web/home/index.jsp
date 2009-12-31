@@ -15,7 +15,7 @@
         
         <%@ include file="../template/base_imports.jsp" %>
         <!-- Index page only - Google Webmaster Tools -->
-        <meta name="verify-v1" content="1JVnTuE1ma/sE0usxzraO5fHUs1IWuH+w2hwxpbp28k=">
+        <meta name="verify-v1" content="1JVnTuE1ma/sE0usxzraO5fHUs1IWuH+w2hwxpbp28k="/>
         
     </head>
     
@@ -51,13 +51,26 @@
                                 
                                 <div class="sidebar_header">Requirements</div>
                                 <div class="sidebar_padding">
-                                    <img src="../resources/images/compatible_firefox.gif" style="height: 30px; float: right; padding: 10px 10px 10px 5px;" alt="Firefox Logo" title="Firefox Logo">
-                                    <img src="../resources/images/compatible_safari.gif" style="height: 30px; float: right; padding: 10px 5px 10px 10px;" alt="Safari logo" title="Safari Logo">
+                                    <img src="../resources/images/compatible_firefox.gif" style="height: 30px; float: right; padding: 10px 10px 10px 5px;" alt="Firefox Logo" title="Firefox Logo"/>
+                                    <img src="../resources/images/compatible_safari.gif" style="height: 30px; float: right; padding: 10px 5px 10px 10px;" alt="Safari logo" title="Safari Logo"/>
                                     <p>
                                         XMAS works best in <a href="http://www.mozilla.com/en-US/firefox/" target="_blank">Firefox</a> or 
                                         <a href="http://www.apple.com/safari/" target="_blank">Safari</a>, and requires that both JavaScript and Cookies are enabled.
                                     </p>
                                 </div>
+                                <div class="sidebar_header_bottom_requirements"></div>
+                            </div>
+                            <div id="localinstallation" class="softwareinstallation">
+                                <h2>Software</h2>
+                                <p>
+                                    <b>To download and install XMAS locally, choose your System:</b><br/>
+                                        <a href="../help/local_install_windows_32bit.jsp">Windows XP 32-bit</a><br></br>
+                                        <a href="../help/local_install_windows_64bit.jsp">Windows XP 64-bit</a><br></br>
+                                        <a href="../help/local_install_windows_32bit.jsp">Windows Vista 32-bit</a><br></br>
+                                        <a href="../help/local_install_windows_64bit.jsp">Windows Vista 64-bit</a><br></br>
+                                        <a href="../help/local_install_linux.jsp">Linux</a><br></br>
+                                        <br/>You can also try our on-line demo version of XMAS <a href="../visualization/visualization.jsp">here</a>, after loading <a href="../data/your_data.jsp">sample dataset(s)</a>.
+                                </p>
                             </div>
                         </div>
                         
@@ -68,7 +81,7 @@
                                     <div class="error">JavaScript Disabled: XMAS will not function correctly</div>
                                 </div>
                                 <h2>Introduction</h2>
-                                <img src="../resources/images/xmas_but_logo.png" style="float: right; height: 150px;" alt="XMAS Logo" title="XMAS Logo">
+                                <img src="../resources/images/xmas_but_logo.png" style="float: right; height: 150px;" alt="XMAS Logo" title="XMAS Logo"/>
                                 <p>
                                     Time series microarray analysis provides an invaluable insight into 
                                     the genetic progression of biological processes, such as pregnancy and disease. 
@@ -87,12 +100,6 @@
                                     XMAS emphasizes interaction and the power, and knowledge transfer potential of facilitating 
                                     an analysis in which the user directly experiences the data.
                                 </p>
-                                
-                                <h2>Software</h2>
-                                <p>
-                                    <b>To download and install XMAS locally, <a href="../help/local_install.jsp">click here</a>. You can also try our on-line demo version of XMAS <a href="../visualization/visualization.jsp">here</a>, after loading <a href="../data/your_data.jsp">sample dataset(s)</a></b>
-                                </p>
-                                
                             </div>
                         </div>
                     </div>

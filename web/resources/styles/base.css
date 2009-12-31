@@ -250,10 +250,14 @@ p {
 #sidebar_container {
     float: right;
     width: 420px;
-    background-color: #F3F3F3;
-    border-bottom: solid gray 1px;
-    margin-bottom: 20px;
+    background-color: #FFFFFF;
 }
+
+.softwareinstallation {
+    background-color: #FFFFFF;
+    padding-top:70px;
+}
+
 .sidebar_header, .sidebar_header_s {
     padding: 20px 5px 5px 5px;
     color: #003399;
@@ -261,7 +265,17 @@ p {
     text-transform: uppercase;
     font-size: 1em;
     border-bottom: 1px solid #9999FF;
-    background-color: #FFF;
+    background-color: #FFFFFF;
+}
+
+.sidebar_header_bottom_requirements {
+    padding: 5px 5px 5px 5px;
+    color: #003399;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    border-bottom: 1px solid #9999FF;
+    background-color: #FFFFFF;
 }
 
 .sidebar_header_s {

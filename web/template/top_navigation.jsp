@@ -100,7 +100,7 @@
                    title="Go to the home page">Home</a>
             </li>
             <li>
-                <a href="../help/local_install.jsp"
+                <a href="../help/local_install_windows_32bit.jsp"
                    id="top_nav_download"
                    alt="Download and Install XMAS locally"
                    title="Download and Install XMAS locally">Download</a>
@@ -207,10 +207,22 @@
         %>
         <ul id="top_sub_navigation_buttons">
             <li>
-                <a href="../help/local_install.jsp" 
-                   id="top_sub_nav_local_install"
-                   alt="Help - Local Install" 
-                   title="Help - Local Install">Local Installation</a>
+                <a href="../help/local_install_windows_32bit.jsp"
+                   id="top_sub_nav_local_install_windows_32bit"
+                   alt="Help - Local Install for Windows XP 32-bit and Vista 32-bit"
+                   title="Help - Local Install for Windows XP 32-bit and Vista 32-bit">Windows XP or Vista (32-bit)</a>
+            </li>
+            <li>
+                <a href="../help/local_install_windows_64bit.jsp"
+                   id="top_sub_nav_local_install_windows_64bit"
+                   alt="Help - Local Install for Windows XP 64-bit and Vista 64-bit"
+                   title="Help - Local Install for Windows XP 64-bit and Vista 64-bit">Windows XP or Vista (64-bit)</a>
+            </li>
+            <li>
+                <a href="../help/local_install_linux.jsp"
+                   id="top_sub_nav_local_install_linux"
+                   alt="Help - Local Install for Linux"
+                   title="Help - Local Install for Linux">Linux</a>
             </li>
         </ul>
         <%        } else if (parentPage.equals(
