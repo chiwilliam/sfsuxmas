@@ -70,7 +70,7 @@
             </p>
             
             <p style="text-align: center;">
-                <INPUT TYPE="SUBMIT" VALUE="Okay, Cluster!" />
+                <input TYPE="SUBMIT" VALUE="Okay, Cluster!" />
             </p>
             
         </form>

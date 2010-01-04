@@ -72,7 +72,7 @@
                                     </div>
                                 </blockquote>
                                 <p style="text-align: center;">
-                                    <INPUT TYPE="SUBMIT" VALUE="Import data" />
+                                    <input TYPE="SUBMIT" VALUE="Import data" />
                                 </p>
                                 
                             </form>

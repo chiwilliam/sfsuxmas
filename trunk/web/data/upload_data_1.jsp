@@ -75,6 +75,7 @@
                                     <li id="upload_sub_nav_add_to_library"><a href="upload_add_to_library.jsp">Add to Library</a></li>
                                 </ul>
                             </div>
+                            
                             <div id="page_body_content">
                                 <form id="uploadform" name="uploadform" action="../SUploadData" method="post" onsubmit="return validate_upload();">
                                     

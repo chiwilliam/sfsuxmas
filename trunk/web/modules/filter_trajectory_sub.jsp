@@ -165,7 +165,7 @@
                        title="Help">
                         <span>?</span>
                     </a>
-                    <INPUT TYPE="SUBMIT" VALUE="Update Filter">
+                    <input TYPE="SUBMIT" VALUE="Update Filter">
                     <!-- <a href="../SFilterManipulator?removeAll" class="button"><span>Remove All Filters</span></a> -->
                 </div>
                 <div class="corners_bar">

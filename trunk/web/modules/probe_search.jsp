@@ -45,7 +45,7 @@ START SIDEBAR MENU
         <div class="sidebar_tool_buttons">
             
             <form action="javascript: get(document.getElementById('probe_search'), '../SSearchProbe', '../modules/probe_renderer.jsp?results', 'search_results');" name="probe_search" id="probe_search">
-                <INPUT type="text" name="search_term" id="search_term" size="15" value="<%= searchTerm%>" /> 
+                <input type="text" name="search_term" id="search_term" size="15" value="<%= searchTerm%>" /> 
                 <SELECT name="search_field" id="search_field" style="width: 100px;">
                     <%
             AnnotationDatabase probeSearchDB = AnnotationDatabaseManager.getActiveDataBase();
@@ -66,7 +66,7 @@ START SIDEBAR MENU
             }
                     %>
                 </SELECT>
-                <INPUT TYPE="SUBMIT" VALUE="Search" />
+                <input TYPE="SUBMIT" VALUE="Search" />
             </form>
             
         </div>

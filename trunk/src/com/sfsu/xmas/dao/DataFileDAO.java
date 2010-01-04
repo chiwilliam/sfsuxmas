@@ -2,6 +2,7 @@ package com.sfsu.xmas.dao;
 
 import com.sfsu.xmas.globals.FileGlobals;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class DataFileDAO {
@@ -12,18 +13,30 @@ public class DataFileDAO {
     
     public File[] getExpressionDataFiles () {
         File[] files = new File[0];
-        String fileDir = com.sfsu.xmas.globals.FileGlobals.getExpressionDataRoot();
-        if (new File(fileDir).exists()) {
-            files = new java.io.File(fileDir).listFiles();
+        try
+        {
+            String fileDir = com.sfsu.xmas.globals.FileGlobals.getExpressionDataRoot();
+            if (new File(fileDir).exists()) {
+                files = new java.io.File(fileDir).listFiles();
+            }
+        }
+        catch(Exception e)
+        {
         }
         return files;
     }
     
     public File[] getKnowledgeDataFiles () {
         File[] files = new File[0];
-        String fileDir = com.sfsu.xmas.globals.FileGlobals.getKnowledgeDataRoot();
-        if (new File(fileDir).exists()) {
-            files = new java.io.File(fileDir).listFiles();
+        try
+        {
+            String fileDir = com.sfsu.xmas.globals.FileGlobals.getKnowledgeDataRoot();
+            if (new File(fileDir).exists()) {
+                files = new java.io.File(fileDir).listFiles();
+            }
+        }
+        catch(Exception e)
+        {
         }
         return files;
     }

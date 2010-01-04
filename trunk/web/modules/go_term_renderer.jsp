@@ -375,7 +375,7 @@
 
                     %>
                     <tr class="<%= rowClass%>" id="go_term_row_<%= goTerm.getStringID()%>">
-                        <td rowspan="2" class="button_star"><INPUT TYPE="CHECKBOX" name="go_term_checkbox_<%= goTerm.getStringID()%>" value="<%= goTerm.getStringID()%>" id="go_term_checkbox_<%= labelIndex%>" <%= disabled%> /></td>
+                        <td rowspan="2" class="button_star"><input TYPE="CHECKBOX" name="go_term_checkbox_<%= goTerm.getStringID()%>" value="<%= goTerm.getStringID()%>" id="go_term_checkbox_<%= labelIndex%>" <%= disabled%> /></td>
                         <td rowspan="2" class="button_star"><img src="../resources/images/<%= imgUrl%>" name="go_term_button_<%= goTerm.getStringID()%>" id="go_term_button_<%= labelIndex%>" onclick="return highlightGOTerm('<%= goTerm.getStringID()%>', <%= labelIndex%>, '<%= rowBandingClass%>');" /></td>
                         <td>
                             <b><%= goTerm.getName()%></b>

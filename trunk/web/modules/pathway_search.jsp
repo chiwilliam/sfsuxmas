@@ -26,8 +26,8 @@ START SIDEBAR MENU
         </div>
         <div class="sidebar_tool_buttons">
             <form action="javascript: get(document.getElementById('pathway_search'), '../SSearchPathway', '../modules/pathway_renderer.jsp?search_results', 'search_results');" name="pathway_search" id="pathway_search">    
-                <INPUT type="text" name="search_term" id="search_term" size="15" value="">
-                <INPUT TYPE="SUBMIT" VALUE="Search" />
+                <input type="text" name="search_term" id="search_term" size="15" value="">
+                <input TYPE="SUBMIT" VALUE="Search" />
             </form>
         </div>
         <div class="corners_bar">

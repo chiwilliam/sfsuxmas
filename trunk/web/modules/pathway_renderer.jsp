@@ -366,7 +366,7 @@
 
                 %>
                 <tr class="<%= rowClass%>" id="pathway_row_<%= pathway.getID()%>">
-                    <td rowspan="2" class="button_star"><INPUT TYPE="CHECKBOX" name="pathway_checkbox_<%= pathway.getID()%>" value="<%= pathway.getID()%>" id="pathway_checkbox_<%= labelIndex%>" <%= disabled%>></td>
+                    <td rowspan="2" class="button_star"><input TYPE="CHECKBOX" name="pathway_checkbox_<%= pathway.getID()%>" value="<%= pathway.getID()%>" id="pathway_checkbox_<%= labelIndex%>" <%= disabled%>></td>
                     <td rowspan="2" class="button_star"><img src="../resources/images/<%= imgUrl%>" name="pathway_button_<%= pathway.getID()%>" id="pathway_button_<%= labelIndex%>" onclick="return highlightPathway(<%= pathway.getID()%>, <%= labelIndex%>, '<%= rowBandingClass%>');" alt="Highlight Pathway" title="Highlight Pathway"></td>
                     <td>
                         <b><%= pathway.getName()%></b>
