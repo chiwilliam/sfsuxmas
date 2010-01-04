@@ -56,7 +56,7 @@
                 <i>(Seperate IDs with a comma, e.g. 206059_at, 202381_at,...)</i>
                 
                 <p>
-                    <INPUT TYPE="SUBMIT" VALUE="Okay, tag this set" />
+                    <input TYPE="SUBMIT" VALUE="Okay, tag this set" />
                 </p>
             </form>
             

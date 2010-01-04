@@ -206,7 +206,7 @@
                 }
                                                 %>
                                                 <th style="">
-                                                    <INPUT TYPE="CHECKBOX" name="attribute_checkbox_<%= head.getAttribute()%>" value="<%= head.getAttribute()%>" id="attribute_checkbox_<%= head.getAttribute()%>" <% if (inUse) {%>checked="checked"<% }%> />
+                                                    <input TYPE="CHECKBOX" name="attribute_checkbox_<%= head.getAttribute()%>" value="<%= head.getAttribute()%>" id="attribute_checkbox_<%= head.getAttribute()%>" <% if (inUse) {%>checked="checked"<% }%> />
                                                            <br />
                                                     <%= head.getAttribute()%>
                                                 </th>
@@ -215,7 +215,7 @@
                                                 %>
                                                 <th>
                                                     <p>
-                                                        <INPUT TYPE="SUBMIT" VALUE="Update" />
+                                                        <input TYPE="SUBMIT" VALUE="Update" />
                                                     </p>
                                                 </th>
                                             </form>

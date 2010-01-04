@@ -38,7 +38,7 @@
                         <tr valign="top">
                             <td />
                             <td>
-                                <INPUT TYPE="SUBMIT" name="create_capture_button" id="create_capture_button" VALUE="Capture" disabled />
+                                <input TYPE="SUBMIT" name="create_capture_button" id="create_capture_button" VALUE="Capture" disabled />
                             </td>
                         </tr>
                         <tr valign="top">

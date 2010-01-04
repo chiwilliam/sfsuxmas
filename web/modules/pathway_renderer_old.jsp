@@ -272,7 +272,7 @@ END SIDEBAR MENU
                 %>
                 <tr class="<%= rowClass%>" id="pathway_row_<%= path.getID()%>">
                     <% if (!summary) {%>
-                    <td><% if (filtIDs.contains(path.getID()) && !summary) {%>* <% }%><INPUT TYPE="CHECKBOX" name="pathway_checkbox_<%= path.getID()%>" value="<%= path.getID()%>" id="pathway_checkbox_<%= i%>" /></td>
+                    <td><% if (filtIDs.contains(path.getID()) && !summary) {%>* <% }%><input TYPE="CHECKBOX" name="pathway_checkbox_<%= path.getID()%>" value="<%= path.getID()%>" id="pathway_checkbox_<%= i%>" /></td>
                     <td>
                         <img src="../resources/images/<%= imgUrl%>" name="pathway_checkbox_<%= path.getID()%>" id="pathway_button_<%= i%>" onclick="return highlightPathway(<%= path.getID()%>, <%= i%>);" />
                     </td>

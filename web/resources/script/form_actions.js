@@ -184,7 +184,7 @@ function get(obj, submit_url, return_url, results_id) {
     
     var getstr = "?";
     for (i=0; i<obj.childNodes.length; i++) {
-        if (obj.childNodes[i].tagName == "INPUT") {
+        if (obj.childNodes[i].tagName == "input") {
             if (obj.childNodes[i].type == "text") {
                 getstr += obj.childNodes[i].name + "=" + obj.childNodes[i].value + "&";
             }

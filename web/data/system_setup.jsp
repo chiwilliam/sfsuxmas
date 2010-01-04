@@ -76,7 +76,7 @@
                                                                    onchange="return check_root_dir();" 
                                                                    onblur="return check_root_dir();" 
                                                                    onkeyup="return check_root_dir();" />
-                                                            <INPUT TYPE="SUBMIT" VALUE="Update" />
+                                                            <input TYPE="SUBMIT" VALUE="Update" />
                                                             <span id="root_dir_msg" class="success">
                                                                 
                                                             </span>

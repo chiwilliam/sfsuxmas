@@ -49,11 +49,11 @@
                     <table>
                         <tr>
                             <th>Affymetrix Gene ID:</th>
-                            <td><INPUT TYPE="TEXT" NAME="affyID" style="width: 190px;"> <i><small>[e.g. 37145_at]</small></i></td>
+                            <td><input TYPE="TEXT" NAME="affyID" style="width: 190px;"> <i><small>[e.g. 37145_at]</small></i></td>
                         </tr>
                         <tr>
                             <th>Internal Gene ID:</th>
-                            <td><INPUT TYPE="TEXT" NAME="geneID" style="width: 190px;"> <i><small>[e.g. 50]</small></i></td>
+                            <td><input TYPE="TEXT" NAME="geneID" style="width: 190px;"> <i><small>[e.g. 50]</small></i></td>
                         </tr>
                         <tr>
                             <th>Pathway:</th>
@@ -321,12 +321,12 @@
                     <table>
                         <tr>
                             <th align="left">Collapsed visualization view?</th>
-                            <td align="right"><INPUT TYPE="checkbox" NAME="unique" value="YES"> <i><small>[Check for 'YES']</small></i></td>
+                            <td align="right"><input TYPE="checkbox" NAME="unique" value="YES"> <i><small>[Check for 'YES']</small></i></td>
                         </tr>
                         
                         <tr>
                             <th align="left">Exclusion Filter?</th>
-                            <td align="right"><INPUT TYPE="checkbox" NAME="exclude" value="YES"> <i><small>[Check for 'YES']</small></i></td>
+                            <td align="right"><input TYPE="checkbox" NAME="exclude" value="YES"> <i><small>[Check for 'YES']</small></i></td>
                         </tr>
                     </table>
                     
@@ -334,7 +334,7 @@
                     
                     <table>
                         <tr>
-                            <th><INPUT TYPE="SUBMIT" VALUE="Submit Filter"></th>
+                            <th><input TYPE="SUBMIT" VALUE="Submit Filter"></th>
                         </tr>
                     </table>
                 </form>

@@ -85,7 +85,7 @@
                                     <h3>Install!</h3>
                                     <div class="indented_div">
                                         <p style="text-align: center;">
-                                            <INPUT TYPE="SUBMIT" VALUE="Create Knowledge Library" />
+                                            <input TYPE="SUBMIT" VALUE="Create Knowledge Library" />
                                         </p>
                                     </div>
                                     

@@ -167,7 +167,7 @@
         </p>
         
         <p style="text-align: center;">
-            <INPUT TYPE="SUBMIT" VALUE="Create file" id="create_file_button" />
+            <input TYPE="SUBMIT" VALUE="Create file" id="create_file_button" />
         </p>
     </form>
     

@@ -54,7 +54,7 @@
                     </ul>
                 </span>
                 
-                <p><INPUT TYPE="submit" VALUE="Load Database" id="database_select_button" /><p>
+                <p><input TYPE="submit" VALUE="Load Database" id="database_select_button" /><p>
                 
             </form>
             

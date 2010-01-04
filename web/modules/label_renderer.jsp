@@ -307,7 +307,7 @@
 
                 %>
                 <tr class="<%= rowClass%>" id="annotation_row_<%= label.getID()%>">
-                    <td rowspan="2" class="button_star"><INPUT TYPE="CHECKBOX" name="label_checkbox_<%= label.getID()%>" value="<%= label.getID()%>" id="label_checkbox_<%= labelIndex%>" <%= disabled%>></td>
+                    <td rowspan="2" class="button_star"><input TYPE="CHECKBOX" name="label_checkbox_<%= label.getID()%>" value="<%= label.getID()%>" id="label_checkbox_<%= labelIndex%>" <%= disabled%>></td>
                     <td rowspan="2" class="button_star"><img src="../resources/images/<%= imgUrl%>" name="annotation_button_<%= label.getID()%>" id="annotation_button_<%= labelIndex%>" onclick="return highlightAnnotation(<%= label.getID()%>, <%= labelIndex%>, '<%= rowBandingClass%>');" alt="Highlight Label" title="Highlight Label"></td>
                     <td>
                         <b><%= label.getName()%></b>

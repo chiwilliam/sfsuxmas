@@ -196,11 +196,11 @@ START SIDEBAR MENU
         </div>
         <div class="sidebar_tool_buttons">
             <% if (dataSize > 0) {%>
-            <INPUT type="button" 
+            <input type="button" 
                    onclick="submit_probe_list_action('../SProbeListActions', <%= firstProbeIndex%>, <%= lastProbeIndex%>, 'filter_isolate');" 
                    alt=""
                    title="" value="Isolate Selected">
-            <INPUT type="button" 
+            <input type="button" 
                    onclick="submit_probe_list_action('../SProbeListActions', <%= firstProbeIndex%>, <%= lastProbeIndex%>, 'filter_exclude');" 
                    alt=""
                    title="" value="Exclude Selected">
@@ -210,7 +210,7 @@ START SIDEBAR MENU
             <!-- <a href="javascript: void(0);" onclick="submit_probe_list_action('../SProbeListActions', <%= firstProbeIndex%>, <%= lastProbeIndex%>, 'filter_annotate_remove');" class="button"><span>Label</span></a> -->
             
             <%@ include file="../labels/label_select.jsp" %>
-            <INPUT type="button" 
+            <input type="button" 
                    onclick="submit_probe_list_action('../SProbeListActions', <%= firstProbeIndex%>, <%= lastProbeIndex%>, 'label_probes');" 
                    alt="Add this label to the selected probes"
                    title="Add this label to the selected probes" value="Label">
@@ -372,7 +372,7 @@ START SIDEBAR MENU
                 <%
                 if (databaseID == null) {
                 %>
-                <td rowspan="<%= rowspan%>" class="button_star <%= coloredCell%>"><INPUT TYPE="CHECKBOX" name="probe_checkbox_<%= probe.getID()%>" value="<%= probe.getID()%>" id="probe_checkbox_<%= i%>" <%= disabled%>></td>
+                <td rowspan="<%= rowspan%>" class="button_star <%= coloredCell%>"><input TYPE="CHECKBOX" name="probe_checkbox_<%= probe.getID()%>" value="<%= probe.getID()%>" id="probe_checkbox_<%= i%>" <%= disabled%>></td>
                 <td rowspan="<%= rowspan%>" class="button_star">
                     <img src="../resources/images/<%= imgUrl%>" name="probe_highlight_<%= probe.getID()%>" id="probe_button_<%= i%>" onclick="return highlightProbe('<%= probe.getID()%>', <%= i%>, '<%= bandingClass%>');" alt="Highlight Probe" title="Highlight Probe">
                 </td>

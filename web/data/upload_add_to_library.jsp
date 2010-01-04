@@ -152,7 +152,7 @@
                             <h3>Install</h3>
                             <div class="indented_div">
                                 <p style="text-align: center;">
-                                    <INPUT TYPE="SUBMIT" VALUE="Integrate pathway data">
+                                    <input TYPE="SUBMIT" VALUE="Integrate pathway data">
                                 </p>
                             </div>
                         </form>
@@ -208,7 +208,7 @@
                             <h3>Install</h3>
                             <div class="indented_div">
                                 <p style="text-align: center;">
-                                    <INPUT TYPE="SUBMIT" VALUE="Integrate pathway data">
+                                    <input TYPE="SUBMIT" VALUE="Integrate pathway data">
                                 </p>
                             </div>
                         </form>
@@ -261,7 +261,7 @@
                             <h3>Install</h3>
                             <div class="indented_div">
                                 <p style="text-align: center;">
-                                    <INPUT TYPE="SUBMIT" VALUE="Integrate GO data">
+                                    <input TYPE="SUBMIT" VALUE="Integrate GO data">
                                 </p>
                             </div>
                         </form>
@@ -386,7 +386,7 @@
                 <h3>Group Probes</h3>
                 <div class="indented_div">
                     <p style="text-align: center;">
-                        <INPUT TYPE="SUBMIT" VALUE="Label Probes" />
+                        <input TYPE="SUBMIT" VALUE="Label Probes" />
                     </p>
                 </div>
                 <%            }
