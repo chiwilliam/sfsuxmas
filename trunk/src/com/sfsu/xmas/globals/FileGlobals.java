@@ -53,7 +53,7 @@ public class FileGlobals {
                 FILE_ROOT = "C:\\xmas\\xmas_files\\";
             }
             else{
-                FILE_ROOT = "/home/whemurad/xmas/xmas_files/";
+                FILE_ROOT = "/home/bdalziel/xmas_files/";
             }
         }        
         return FILE_ROOT;
