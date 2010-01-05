@@ -2,8 +2,8 @@ package com.sfsu.xmas.dao;
 
 import com.sfsu.xmas.globals.FileGlobals;
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.security.AccessControlException;
 
 public class DataFileDAO {
 
@@ -13,18 +13,20 @@ public class DataFileDAO {
     
     public File[] getExpressionDataFiles () {
         File[] files = new File[0];
+        String fileDir = com.sfsu.xmas.globals.FileGlobals.getExpressionDataRoot();
         try
         {
-            String fileDir = com.sfsu.xmas.globals.FileGlobals.getExpressionDataRoot();
             if (new File(fileDir).exists()) {
                 files = new java.io.File(fileDir).listFiles();
             }
         }
-        catch(Exception e)
+        catch(AccessControlException e)
         {
+            System.out.println(e.getMessage());
         }
         return files;
     }
+
     
     public File[] getKnowledgeDataFiles () {
         File[] files = new File[0];
@@ -35,8 +37,9 @@ public class DataFileDAO {
                 files = new java.io.File(fileDir).listFiles();
             }
         }
-        catch(Exception e)
+        catch(AccessControlException e)
         {
+            System.out.println(e.getMessage());
         }
         return files;
     }
