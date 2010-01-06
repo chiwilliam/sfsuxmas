@@ -209,14 +209,14 @@
             <li>
                 <a href="../help/local_install_windows_32bit.jsp"
                    id="top_sub_nav_local_install_windows_32bit"
-                   alt="Help - Local Install for Windows XP 32-bit and Vista 32-bit"
-                   title="Help - Local Install for Windows XP 32-bit and Vista 32-bit">Windows XP or Vista (32-bit)</a>
+                   alt="Help - Local Install for Windows XP 32-bit, Windows Vista 32-bit and Windows 7 32-bit"
+                   title="Help - Local Install for Windows XP 32-bit, Windows Vista 32-bit and Windows 7 32-bit">Windows XP, Vista or 7 (32-bit)</a>
             </li>
             <li>
                 <a href="../help/local_install_windows_64bit.jsp"
                    id="top_sub_nav_local_install_windows_64bit"
-                   alt="Help - Local Install for Windows XP 64-bit and Vista 64-bit"
-                   title="Help - Local Install for Windows XP 64-bit and Vista 64-bit">Windows XP or Vista (64-bit)</a>
+                   alt="Help - Local Install for Windows XP 64-bit, Windows Vista 64-bit and Windows 7 64-bit"
+                   title="Help - Local Install for Windows XP 64-bit, Windows Vista 64-bit and Windows 7 64-bit">Windows XP, Vista or 7 (64-bit)</a>
             </li>
             <li>
                 <a href="../help/local_install_linux.jsp"
@@ -335,10 +335,10 @@
                    title="Help - Data Views & Operators">Data Views & Operators</a>
             </li>
             <li>
-                <a href="../help/local_install.jsp" 
-                   id="top_sub_nav_local_install"
-                   alt="Help - Local Install" 
-                   title="Help - Local Install">Local Installation</a>
+                <a href="../help/local_install_windows_32bit.jsp"
+                   id="top_sub_nav_local_install_windows_32bit"
+                   alt="Help - Local Installation"
+                   title="Help - Local Installation">Local Installation</a>
             </li>
             <li>
                 <a href="../help/data_guides.jsp" 
