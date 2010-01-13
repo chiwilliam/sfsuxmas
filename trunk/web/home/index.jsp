@@ -71,7 +71,8 @@
                                         <a href="../help/local_install_windows_32bit.jsp">Windows 7 32-bit</a><br></br>
                                         <a href="../help/local_install_windows_64bit.jsp">Windows 7 64-bit</a><br></br>
                                         <a href="../help/local_install_linux.jsp">Linux</a><br></br>
-                                        <br/>You can also try our on-line demo version of XMAS <a href="../visualization/visualization.jsp">here</a>, after loading <a href="../data/your_data.jsp">sample dataset(s)</a>.
+                                        <a href="../help/local_install_mac.jsp">Mac OS X</a><br></br>
+                                        <br></br>You can also try <b>XMAS</b> <a href="../visualization/visualization.jsp">here</a>, after loading <a href="../data/your_data.jsp">sample dataset(s)</a>.
                                 </p>
                             </div>
                         </div>
