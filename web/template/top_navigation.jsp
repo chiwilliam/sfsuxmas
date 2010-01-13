@@ -224,6 +224,12 @@
                    alt="Help - Local Install for Linux"
                    title="Help - Local Install for Linux">Linux</a>
             </li>
+            <li>
+                <a href="../help/local_install_mac.jsp"
+                   id="top_sub_nav_local_install_mac"
+                   alt="Help - Local Install for Mac OS"
+                   title="Help - Local Install for Mac OS">Mac OS X</a>
+            </li>
         </ul>
         <%        } else if (parentPage.equals(
                 "data")) {
