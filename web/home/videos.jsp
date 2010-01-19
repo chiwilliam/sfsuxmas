@@ -3,7 +3,7 @@
 <%@ include file="../template/file_header.jsp" %>
 
 <%
-            String parentPageName = "Home";
+            String parentPageName = "Help";
             String pageName = "Videos";
 %>
 
@@ -33,10 +33,10 @@
             <div id="page_body">
                 <div id="page_body_sub">
                     <div id="page_body_main_full">
-                        <h1>Video</h1>
+                        <h1>Case Studies</h1>
                         <div id="page_body_content">
                             
-                            <h2>Case Study Playlist</h2>
+                            <h2>Case Studies Playlist</h2>
                             
                             <p>
                                 <a href="http://www.youtube.com/view_play_list?p=577C8F186A810BEB">XMAS Case Studies Playlist</a> on YouTube.

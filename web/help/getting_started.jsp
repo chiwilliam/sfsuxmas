@@ -57,7 +57,7 @@
                         </p>
                         
                         <p>
-                            To access the XMAS interface containing the visualizations described below, click the <a href="../visualization/visualization.jsp">XMAS</a> link in the top navigation bar.
+                            To access the XMAS interface containing the visualizations described below, click the <a href="../visualization/visualization.jsp">Run XMAS</a> link in the top navigation bar.
                             To enter analysis, you must have both an expression data set and a trajectory file loaded.
                         </p>
                         <p>

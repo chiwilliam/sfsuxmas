@@ -3,8 +3,8 @@
 <%@ include file="../template/file_header.jsp" %>
 
 <%
-            String parentPageName = "Tutorials";
-            String pageName = "Home";
+            String parentPageName = "Help";
+            String pageName = "Tutorials";
 %>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
@@ -38,7 +38,7 @@
                             <h2>Tackling Common Data Analysis Information Goals with XMAS</h2>
                             
                             <p>
-                                The pages listed below provide simple descriptions of how the operators, data views, visualizations and functionality of XMAS can be used to tackle common information goals.
+                                The pages listed below provide simple descriptions of how the operators, data views, visualizations and functionality of XMAS can be used to tackle commonly encoutered information goals.
                             </p>
                             
                             <p>

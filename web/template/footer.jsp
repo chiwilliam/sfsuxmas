@@ -27,14 +27,13 @@
             <div class="footer_sub">
                 <div class="footer_content">
                     <div style="float: left;">
-                        Copyright &copy; 2009. All rights reserved | Contact: b.j.dalziel [at] gmail [dot] com<br>
+                        Copyright &copy; 2009. All rights reserved | Contact: rsingh [at] cs [dot] sfsu [dot] edu<br>
                         <i>* Beta release - please <a href="http://code.google.com/p/sfsuxmas/issues/list" target="_blank">report bugs</a> and come back for updates</i><br>&nbsp;<br>
                         <a href="../home/index.jsp">Home</a> | 
                         <a href="http://code.google.com/p/sfsuxmas/" target="_blank">Google Code Project</a>
                     </div>
                     <div style="text-align: right;">
                         <a href="http://tintin.sfsu.edu/" target="_blank"><img src="../resources/images/biocomputing.png" style="height: 50px; margin-right: 50px; margin-top: 15px;" alt="Biocomputing & Media Research Group"></a>
-                        <a href="http://dentistry.ucsf.edu/fisherlab/index.html" target="_blank"><img src="../resources/images/ucsf_logo.png" style="height: 50px; margin-right: 50px; margin-top: 15px;" alt=""></a>
                     </div>
                 </div>
             </div>

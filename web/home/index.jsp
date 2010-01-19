@@ -60,21 +60,6 @@
                                 </div>
                                 <div class="sidebar_header_bottom_requirements"></div>
                             </div>
-                            <div id="localinstallation" class="softwareinstallation">
-                                <h2>Software</h2>
-                                <p>
-                                    <b>To download and install XMAS locally, choose your System:</b><br/>
-                                        <a href="../help/local_install_windows_32bit.jsp">Windows XP 32-bit</a><br></br>
-                                        <a href="../help/local_install_windows_64bit.jsp">Windows XP 64-bit</a><br></br>
-                                        <a href="../help/local_install_windows_32bit.jsp">Windows Vista 32-bit</a><br></br>
-                                        <a href="../help/local_install_windows_64bit.jsp">Windows Vista 64-bit</a><br></br>
-                                        <a href="../help/local_install_windows_32bit.jsp">Windows 7 32-bit</a><br></br>
-                                        <a href="../help/local_install_windows_64bit.jsp">Windows 7 64-bit</a><br></br>
-                                        <a href="../help/local_install_linux.jsp">Linux</a><br></br>
-                                        <a href="../help/local_install_mac.jsp">Mac OS X</a><br></br>
-                                        <br></br>You can also try <b>XMAS</b> <a href="../visualization/visualization.jsp">here</a>, after loading <a href="../data/your_data.jsp">sample dataset(s)</a>.
-                                </p>
-                            </div>
                         </div>
                         
                         <div id="page_body_main">
