@@ -3,7 +3,7 @@
 <%@ include file="../template/file_header.jsp" %>
 
 <%
-            String parentPageName = "Home";
+            String parentPageName = "Team";
             String pageName = "Team";
 %>
 
@@ -61,7 +61,7 @@
                                 <table style="width: 100%;">
                                     <tr>
                                         <td style="text-align: center; width: 50%;"><img src="../resources/images/sfsu_logo.jpg" style="height: 40px; margin-top: 10px;" /></td>
-                                        <td style="text-align: center; width: 50%;"><img src="../resources/images/ucsf_logo.gif" style="height: 40px; margin-top: 10px;" /></td>
+                                        <td style="text-align: center; width: 50%;"></td>
                                     </tr>
                                 </table>
                                 

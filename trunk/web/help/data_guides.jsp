@@ -3,7 +3,7 @@
 <%@ include file="../template/file_header.jsp" %>
 
 <%
-            String parentPageName = "Help";
+            String parentPageName = "Download";
             String pageName = "Data_Guides";
 %>
 
@@ -35,7 +35,7 @@
                         <div id="page_body_content">
                             
                             <p>
-                                Download and install XMAS by following the <a href="../help/local_install.jsp">Local Installation</a> instructions.
+                                Download and install XMAS by following the <a href="../help/local_install_windows_32bit.jsp">Local Installation</a> instructions.
                             </p>
                             
                             <p>

@@ -3,7 +3,7 @@
 <%@ include file="../template/file_header.jsp" %>
 
 <%
-            String parentPageName = "Home";
+            String parentPageName = "Team";
             String pageName = "Publications";
 %>
 
@@ -31,31 +31,35 @@
                     <div id="page_body_sub">
                         <div id="sidebar_container">
                             <div id="sidebar">
-                                <div class="sidebar_header">Most Recent</div>
+                                <div class="sidebar_header">For details on experiential computing see</div>
                                 <div class="sidebar_padding">
                                     <p>
-                                        Ben Dalziel, Hui Yang, Rahul Singh, Matthew Gormley, Susan Fisher: XMAS: An Experiential Approach for Visualization, Analysis, and Exploration of Time Series Microarray Data. BIRD 2008: 16-31
-                                        <br /><a href="http://dblp.uni-trier.de/rec/bibtex/conf/bird/DalzielYSGF08" target="_blank">BibTeX</a> | <a href="../files/xmas_bird_paper_2008.pdf">PDF</a>
+                                        R. Singh and R. Jain R. Singh and R. Jain, From Information-Centric to Experiential Environments, in  Interactive Computation: The New Paradigm, D. Goldin, S. Smolka, and P. Wegner, eds., Springer Verlag, pp. 323-351, 2006
+                                        <br /><a href="http://tintin.sfsu.edu/papers/InteractiveComputation-NewParadigm-BookChapter.pdf" target="_blank">PDF</a>
+                                    </p>
+                                    <p>
+                                        Jain, R, Experiential computing. Commun. ACM Vol. 46, No. 7, pp. 48-55, 2003
+                                        <br /><a href="http://ngs.ics.uci.edu/pdf/mv_cacm_experiential_computing.pdf" target="_blank">PDF</a>
+
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div id="page_body_main">
                             <h1>Publications</h1>
                             <div id="page_body_content">
                                 
-                                <h2>2008</h2>
-                                
-                                <a name="bird_08" /><h3>July, 7-9: BIRD 2008</h3>
-                                <h4>Technical University of Vienna, Austria</h4>
-                                
                                 <blockquote>
                                     
-                                    <div class="paper_title">"XMAS: An Experiential Approach for Visualization, Analysis, and Exploration of Time Series Microarray Data"</div>
-                                    <div class="paper_authors">Ben Dalziel, Hui Yang, Rahul Singh, Matthew Gormley, and Susan Fisher</div>
+                                    <div class="paper_title">
+                                        <p>
+                                            Ben Dalziel, Hui Yang, Rahul Singh, Matthew Gormley, Susan Fisher: "XMAS: An Experiential Approach for Visualization, Analysis, and Exploration of Time Series Microarray Data." BIRD 2008: 16-31
+                                            <br /><a href="http://dblp.uni-trier.de/rec/bibtex/conf/bird/DalzielYSGF08" target="_blank">BibTeX</a> | <a href="../files/xmas_bird_paper_2008.pdf">PDF</a>
+                                        </p>
+                                    </div>
                                     <div class="paper_quote">
-                                        <b>ABSTRACT</b>: Time series microarray analysis provides an invaluable insight into 
+                                        <br/><b>ABSTRACT</b>: Time series microarray analysis provides an invaluable insight into
                                         the genetic progression of biological processes, such as pregnancy and disease. 
                                         Many algorithms and systems exist to meet the challenge of extracting knowledge from 
                                         the resultant data sets, but traditional methods limit user interaction, 
@@ -73,28 +77,7 @@
                                         and approach, proving the efficacy of XMAS not only as tool for validation  
                                         and sense making, but also as an unparalleled source of serendipitous results.
                                     </div>
-                                    <div class="paper_quote">
-                                        <b>Full Text</b>: Available from the links below.
-                                    </div>
                                 </blockquote>
-                                <div class="paper_links_block">
-                                    <span class="paper_link_title"><b>Related Links:</b></span>
-                                    <div class="paper_links">
-                                        <ul>
-                                            <li><a href="../files/xmas_bird_paper_2008.pdf">PDF</a></li>
-                                            <li><a href="http://www.birdconf.org" target="_blank">Bioinformatics Research and Development (BIRD)</a></li>
-                                            <li><a href="http://www.springer.com/computer/computational+biology+and+bioinformatics/book/978-3-540-70598-7" target="_blank">Communications in Computer and Information Science (Springer Verlag)</a></li>
-                                            <li><a href="http://www.tuwien.ac.at/tu_vienna/" target="_blank">Vienna University of Technology</a></li>
-                                        </ul> 
-                                    </div>
-                                    
-                                    <span class="paper_link_title"><b>Related Files:</b></span>
-                                    <div class="paper_links">
-                                        <ul>
-                                            <li><a href="../files/xmas_bird_presentation_2008.ppt" target="_blank">Presentation on XMAS</a> given by Rahul Singh at BIRD '08 and the University of Vienna</li>
-                                        </ul> 
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

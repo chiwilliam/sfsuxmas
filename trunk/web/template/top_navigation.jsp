@@ -76,6 +76,13 @@
         border: 0;
         margin-top: 10px;
     }
+    .web_demo_version{
+        float:left;
+        margin-left:121px;
+        margin-top:25px;
+        color:white;
+        width:153px;
+    }
     .header_footer {
         height: 26px;
         background-color: #FF9900;
@@ -89,6 +96,7 @@
 %>
 <div id="header_container">
     <div class="header">
+        <span class="web_demo_version"><hr></span>
         <a href="../home/">
             <img src="../resources/images/xmas_logo.png" class="main_logo" alt="XMAS Logo" title="XMAS Logo">
         </a>
@@ -124,16 +132,10 @@
                    title="View help files for XMAS">Help</a>
             </li>
             <li>
-                <a href="../tutorials/index.jsp" 
-                   id="top_nav_tutorials"
-                   alt="View tutorials for XMAS" 
-                   title="View tutorials for XMAS">Tutorials</a>
-            </li>
-            <li>
-                <a href="../util/admin.jsp"
-                   id="top_nav_admin"
-                   alt="Administer XMAS" 
-                   title="Administer XMAS">Admin</a>
+                <a href="../home/team.jsp"
+                   id="top_nav_team"
+                   alt="Team Information"
+                   title="Team Information">Team</a>
             </li>
             <%
             if (parentPage.equals("kegg")) {%>
@@ -172,36 +174,6 @@
                    alt="Go to the Home Page" 
                    title="Go to the Home Page">Home Page</a>
             </li>
-            <li>
-                <a href="../home/system.jsp" 
-                   id="top_sub_nav_system"
-                   alt="Go to the System Description" 
-                   title="Go to the System Description">System Description & Requirements</a>
-            </li>
-            <li>
-                <a href="../home/download.jsp" 
-                   id="top_sub_nav_download"
-                   alt="Go to the Download Page" 
-                   title="Go to the Download Page">Download</a>
-            </li>
-            <li>
-                <a href="../home/publications.jsp" 
-                   id="top_sub_nav_publications"
-                   alt="View the latest publications about XMAS" 
-                   title="View the latest publications about XMAS">Publications</a>
-            </li>
-            <li>
-                <a href="../home/team.jsp" 
-                   id="top_sub_nav_team"
-                   alt="Meet the XMAS Team" 
-                   title="Meet the XMAS Team">Team</a>
-            </li>
-            <li>
-                <a href="../home/videos.jsp" 
-                   id="top_sub_nav_videos"
-                   alt="See XMAS related Videos" 
-                   title="See XMAS related Videos">Videos</a>
-            </li>
         </ul>
         <%                } else if (parentPage.equals("download")) {
         %>
@@ -229,6 +201,12 @@
                    id="top_sub_nav_local_install_mac"
                    alt="Help - Local Install for Mac OS"
                    title="Help - Local Install for Mac OS">Mac OS X</a>
+            </li>
+            <li>
+                <a href="../help/data_guides.jsp"
+                   id="top_sub_nav_data_guides"
+                   alt="Help - Data"
+                   title="Help - Data">Data Guides</a>
             </li>
         </ul>
         <%        } else if (parentPage.equals(
@@ -347,20 +325,32 @@
                    title="Help - Local Installation">Local Installation</a>
             </li>
             <li>
-                <a href="../help/data_guides.jsp" 
-                   id="top_sub_nav_data_guides"
-                   alt="Help - Data" 
-                   title="Help - Data">Data Guides</a>
+                <a href="../home/videos.jsp"
+                   id="top_sub_nav_videos"
+                   alt="Case Studies"
+                   title="Case Studies">Case Studies</a>
+            </li>
+            <li>
+                <a href="../tutorials/index.jsp"
+                   id="top_sub_nav_tutorials"
+                   alt="Tutorials Home"
+                   title="Tutorials Home">Tutorials</a>
             </li>
         </ul>
-        <%                } else if (parentPage.equals("tutorials")) {
+        <%                } else if (parentPage.equals("team")){
         %>
         <ul id="top_sub_navigation_buttons">
             <li>
-                <a href="../tutorials/index.jsp" 
-                   id="top_sub_nav_home"
-                   alt="Tutorials Home" 
-                   title="Tutorials Home">Home</a>
+                <a href="../home/team.jsp"
+                   id="top_sub_nav_team"
+                   alt="Meet the XMAS Team"
+                   title="Meet the XMAS Team">Team</a>
+            </li>
+            <li>
+                <a href="../home/publications.jsp"
+                   id="top_sub_nav_publications"
+                   alt="Publications"
+                   title="Publications">Publications</a>
             </li>
         </ul>
         <%                }

@@ -69,26 +69,14 @@
                         </div>
                         
                         
-                        <h2>Local Installation</h2>
+                        <h2>Loading Datasets</h2>
                         
-                            <p>
-                                Many of these instructions, particularly relating to data management, require you to be authenticated as an administrator. 
-                                To do this simply access the <a href="../util/admin.jsp">admin page</a> and enter the following passphrase: "xmas" (only valid for local installations).
-                            </p>
-                            
-                        <div class="help_cat">
-                            <h3><a href="../help/local_install.jsp">Local Install</a></h3>
-                            <p>
-                                There are a number of stages in the installation of XMAS. 
-                                Due to the technical nature of some of these components you might require assistance from an IT professional during setup.
-                            </p>
-                        </div>
                         <div class="help_cat">
                             <h3><a href="../help/data_guides.jsp">Data Guides</a></h3>
                             <p>
-                                These steps are only required for local installation, but you might find some useful information about the data managed within XMAS. 
+                                These steps are only required for <a href="../help/local_install_windows_32bit.jsp">local installation</a>, but you might find some useful information about the data managed within XMAS.
                                 The live deployment has data preinstalled, which can be loaded on demand.
-                                There are also sample data files available from the Downloads page.
+                                There are also sample data files available from the <a href="../help/local_install_windows_32bit.jsp">Downloads</a> page.
                             </p>
                         </div>
                         
