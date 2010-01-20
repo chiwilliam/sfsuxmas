@@ -3,8 +3,8 @@
 <%@ include file="../template/file_header.jsp" %>
 
 <%
-            String parentPageName = "Tutorials";
-            String pageName = "Home";
+            String parentPageName = "Download";
+            String pageName = "Data_Guides";
 %>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
