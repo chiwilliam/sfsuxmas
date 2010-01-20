@@ -55,7 +55,7 @@
                                     <div class="paper_title">
                                         <p>
                                             Ben Dalziel, Hui Yang, Rahul Singh, Matthew Gormley, Susan Fisher: "XMAS: An Experiential Approach for Visualization, Analysis, and Exploration of Time Series Microarray Data." BIRD 2008: 16-31
-                                            <br /><a href="http://dblp.uni-trier.de/rec/bibtex/conf/bird/DalzielYSGF08" target="_blank">BibTeX</a> | <a href="../files/xmas_bird_paper_2008.pdf">PDF</a>
+                                            <br /><a href="http://dblp.uni-trier.de/rec/bibtex/conf/bird/DalzielYSGF08" target="_blank">BibTeX</a> | <a href="http://tintin.sfsu.edu/papers/BIRD2008-XMAS.pdf">PDF</a>
                                         </p>
                                     </div>
                                     <div class="paper_quote">
