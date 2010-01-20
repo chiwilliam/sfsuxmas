@@ -39,7 +39,7 @@
                             <h2>Case Studies Playlist</h2>
                             
                             <p>
-                                <a href="http://www.youtube.com/view_play_list?p=577C8F186A810BEB">XMAS Case Studies Playlist</a> on YouTube.
+                                <a target="_blank" href="http://www.youtube.com/view_play_list?p=577C8F186A810BEB">XMAS Case Studies Playlist</a> on YouTube.
                             </p>
                             
                             
