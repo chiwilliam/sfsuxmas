@@ -114,18 +114,6 @@
                    title="Download and Install XMAS locally">Download</a>
             </li>
             <li>
-                <a href="../data/your_data.jsp" 
-                   id="top_nav_data"
-                   alt="Manage your data" 
-                   title="Manage your data">Load Data</a>
-            </li>
-            <li>
-                <a href="../visualization/visualization.jsp" 
-                   id="top_nav_xmas"
-                   alt="Enter the Analysis Environment" 
-                   title="Load at least one dataset before running XMAS">Run XMAS</a>
-            </li>
-            <li>
                 <a href="../help/index.jsp" 
                    id="top_nav_help"
                    alt="View help files for XMAS" 
@@ -136,6 +124,18 @@
                    id="top_nav_team"
                    alt="Team Information"
                    title="Team Information">Team</a>
+            </li>
+            <li>
+                <a href="../data/your_data.jsp"
+                   id="top_nav_data"
+                   alt="Manage your data"
+                   title="Manage your data">Load Data</a>
+            </li>
+            <li>
+                <a href="../visualization/visualization.jsp"
+                   id="top_nav_xmas"
+                   alt="Enter the Analysis Environment"
+                   title="Load at least one dataset before running XMAS">Run XMAS</a>
             </li>
             <%
             if (parentPage.equals("kegg")) {%>
