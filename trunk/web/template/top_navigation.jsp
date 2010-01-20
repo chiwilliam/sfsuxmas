@@ -79,9 +79,11 @@
     .web_demo_version{
         float:left;
         margin-left:205px;
-        margin-top:25px;
+        margin-top:15px;
+        height:30px;
         color:white;
         width:150px;
+        text-align:center;
     }
     .header_footer {
         height: 26px;
@@ -96,7 +98,7 @@
 %>
 <div id="header_container">
     <div class="header">
-        <span class="web_demo_version"><hr></span>
+        <span class="web_demo_version">Web-Demo Version<br/><hr></span>
         <a href="../home/">
             <img src="../resources/images/xmas_logo.png" class="main_logo" alt="XMAS Logo" title="XMAS Logo">
         </a>
