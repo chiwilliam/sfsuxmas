@@ -301,24 +301,6 @@
                    title="Help Home">Home</a>
             </li>
             <li>
-                <a href="../help/getting_started.jsp" 
-                   id="top_sub_nav_getting_started"
-                   alt="Help - Getting Started" 
-                   title="Help - Getting Started">Getting Started</a>
-            </li>
-            <li>
-                <a href="../help/visualizations.jsp" 
-                   id="top_sub_nav_visualizations"
-                   alt="Help - Visualizations" 
-                   title="Help - Visualizations">Visualizations</a>
-            </li>
-            <li>
-                <a href="../help/data_views.jsp" 
-                   id="top_sub_nav_data_views"
-                   alt="Help - Data Views & Operators" 
-                   title="Help - Data Views & Operators">Data Views & Operators</a>
-            </li>
-            <li>
                 <a href="../help/local_install_windows_32bit.jsp"
                    id="top_sub_nav_local_install_windows_32bit"
                    alt="Help - Local Installation"
