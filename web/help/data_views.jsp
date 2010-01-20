@@ -4,7 +4,7 @@
 
 <%
             String parentPageName = "Help";
-            String pageName = "Data_Views";
+            String pageName = "Home";
 %>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
