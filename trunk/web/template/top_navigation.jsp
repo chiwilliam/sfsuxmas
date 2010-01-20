@@ -307,16 +307,16 @@
                    title="Help - Local Installation">Local Installation</a>
             </li>
             <li>
-                <a href="../home/videos.jsp"
-                   id="top_sub_nav_videos"
-                   alt="Case Studies"
-                   title="Case Studies">Case Studies</a>
-            </li>
-            <li>
                 <a href="../tutorials/index.jsp"
                    id="top_sub_nav_tutorials"
                    alt="Tutorials Home"
                    title="Tutorials Home">Tutorials</a>
+            </li>
+            <li>
+                <a href="../home/videos.jsp"
+                   id="top_sub_nav_videos"
+                   alt="Case Studies"
+                   title="Case Studies">Case Studies</a>
             </li>
         </ul>
         <%                } else if (parentPage.equals("team")){
