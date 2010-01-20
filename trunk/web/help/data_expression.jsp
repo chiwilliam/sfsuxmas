@@ -3,7 +3,7 @@
 <%@ include file="../template/file_header.jsp" %>
 
 <%
-            String parentPageName = "Help";
+            String parentPageName = "Download";
             String pageName = "Data_Guides";
 %>
 

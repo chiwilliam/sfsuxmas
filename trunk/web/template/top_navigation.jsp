@@ -78,10 +78,10 @@
     }
     .web_demo_version{
         float:left;
-        margin-left:121px;
+        margin-left:205px;
         margin-top:25px;
         color:white;
-        width:153px;
+        width:150px;
     }
     .header_footer {
         height: 26px;
