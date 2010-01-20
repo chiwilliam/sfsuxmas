@@ -39,7 +39,7 @@ public abstract class BaseMySQLDAO {
             if (sql.length() > maxQueryDisplay) {
                 sql = sql.substring(0, Math.min(maxQueryDisplay, sql.length())) + "...";
             }
-            System.out.println("DURATION = " + et.duration() + " in class " + this.getClass().getName() + ", SQL: " + sql);
+            //System.out.println("DURATION = " + et.duration() + " in class " + this.getClass().getName() + ", SQL: " + sql);
             if (resultSetRecieved) {
                 //
             }
@@ -90,7 +90,7 @@ public abstract class BaseMySQLDAO {
                         sql = sql.substring(0, Math.min(maxQueryDisplay, sql.length())) + "...";
                     }
                     DBConnectionManager.getInstance().freeConnection(FileGlobals.DB_PROFILE, conn);
-                    System.out.println("DURATION = " + et.duration() + " in class " + this.getClass().getName() + ", SQL: " + sql);
+                    //System.out.println("DURATION = " + et.duration() + " in class " + this.getClass().getName() + ", SQL: " + sql);
                 } else {
                     System.err.println(this.getClass().getName() + ", null connection: " + sql);
                 }
