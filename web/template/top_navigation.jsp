@@ -79,7 +79,7 @@
     .web_demo_version{
         float:left;
         margin-left:205px;
-        margin-top:15px;
+        margin-top:17px;
         height:30px;
         color:white;
         width:150px;
@@ -98,9 +98,9 @@
 %>
 <div id="header_container">
     <div class="header">
-        <span class="web_demo_version">Web-Demo Version<br/><hr></span>
+        <span class="web_demo_version"><img id="webdemoversion" title="Web-Demo Version" alt="Web-Demo Version" src="../resources/images/webdemoversion.gif" /></span>
         <a href="../home/">
-            <img src="../resources/images/xmas_logo.png" class="main_logo" alt="XMAS Logo" title="XMAS Logo">
+            <img src="../resources/images/xmas_logo.png" class="main_logo" alt="XMAS Logo" title="XMAS Logo" />
         </a>
         <ul id="top_navigation_buttons">
             <li>
