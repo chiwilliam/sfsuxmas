@@ -36,6 +36,10 @@
                         <div id="page_body_content">
 
                             <p>
+                                &laquo; <a href="../tutorials/index.jsp">Back to Tutorial index</a>
+                            </p>
+
+                            <p>
                                 These tutorials use data pre-installed in the Web Demo version of XMAS, hosted at: <a href="http://tintin.sfsu.edu:8080/xmas/data/your_data.jsp">http://tintin.sfsu.edu:8080/xmas/data/your_data.jsp</a>. To reenact the scenarios documented in each tutorial, you should load the required data from the '<a href="http://tintin.sfsu.edu:8080/xmas/data/your_data.jsp">Load Data</a>' page, and then proceed to '<a href="http://tintin.sfsu.edu:8080/xmas/visualization/visualization.jsp">Run XMAS</a>'.
                             </p>
 
