@@ -36,8 +36,8 @@
                                 XMAS standalone installation is divided into three main steps:
                             </p>
                             <ol>
-                                <li>Watch the "how-to" installation video</li>
                                 <li>Download Installation Package</li>
+                                <li>Watch the "how-to" installation video</li>
                                 <li>Install XMAS, following the steps presented in the "how-to" video</li>
                             </ol>
                             <p>

@@ -33,23 +33,90 @@
             <div id="page_body">
                 <div id="page_body_sub">
                     <div id="page_body_main_full">
-                        <h1>Case Studies</h1>
+                        <h1>Case Studies - Videos</h1>
                         <div id="page_body_content">
-                            
-                            <h2>Case Studies Playlist</h2>
-                            
-                            <p>
-                                <a target="_blank" href="http://www.youtube.com/view_play_list?p=577C8F186A810BEB">XMAS Case Studies Playlist</a> on YouTube.
-                            </p>
-                            
-                            
-                            <h2>Embedded Case Studies</h2>
-                            <p>
-                                Use the navigation in the video player below to locate case studies.
-                            </p>
-                            <p>
-                                <object width="480" height="385"><param name="movie" value="http://www.youtube.com/p/577C8F186A810BEB&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/p/577C8F186A810BEB&hl=en&fs=1" type="application/x-shockwave-flash" width="480" height="385" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-                            </p>
+                            <table width="950px">
+                                <tr>
+                                    <td align="left" width="500px">
+                                        <p>
+                                            <h2>1. Negative Differential Expression at Term</h2>
+                                            <p>
+                                                <object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/93RQHtSMbi0&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/93RQHtSMbi0&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+                                            </p>
+                                            <br></br>
+                                        </p>
+                                    </td>
+                                    <td align="left" width="450px">
+                                        <p>
+                                            <h2>2. Comparative Analysis</h2>
+                                            <p>
+                                                <object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/hcvW0TkqJqQ&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/hcvW0TkqJqQ&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+                                            </p>
+                                            <br></br>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" width="500px">
+                                        <p>
+                                            <h2>3. Cross Data Set with Knowledge Feedback Loop</h2>
+                                            <p>
+                                                <object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/cPcbXtDF47Q&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/cPcbXtDF47Q&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+                                            </p>
+                                            <br></br>
+                                        </p>
+                                    </td>
+                                    <td align="left" width="450px">
+                                        <p>
+                                            <h2>4. Attribute Linking</h2>
+                                            <p>
+                                                <object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/zH9JoUh7hDU&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/zH9JoUh7hDU&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+                                            </p>
+                                            <br></br>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" width="500px">
+                                        <p>
+                                            <h2>5. Candidates for positive differential expression</h2>
+                                            <p>
+                                                <object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/3uPou9cyIdk&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/3uPou9cyIdk&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+                                            </p>
+                                            <br></br>
+                                        </p>
+                                    </td>
+                                    <td align="left" width="450px">
+                                        <p>
+                                            <h2>6. Placental Case Study</h2>
+                                            <p>
+                                                <object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/TScjKA9EIFg&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/TScjKA9EIFg&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+                                            </p>
+                                            <br></br>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" width="500px">
+                                        <p>
+                                            <h2>7.1. Exploring a serendipitous observation (Part 1)</h2>
+                                            <p>
+                                                <object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/E9xnMqyxMB0&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/E9xnMqyxMB0&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+                                            </p>
+                                            <br></br>
+                                        </p>
+                                    </td>
+                                    <td align="left" width="450px">
+                                        <p>
+                                            <h2>7.2. Exploring a serendipitous observation (Part 2)</h2>
+                                            <p>
+                                                <object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/E9xnMqyxMB0&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/E9xnMqyxMB0&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+                                            </p>
+                                            <br></br>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>

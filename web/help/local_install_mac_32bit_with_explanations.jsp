@@ -4,7 +4,7 @@
 
 <%
             String parentPageName = "Download";
-            String pageName = "Local_Install_Mac";
+            String pageName = "Local_Install_Mac_32bit";
 %>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
@@ -33,9 +33,10 @@
                         <h1>Installation Guide</h1>
                         <div id="page_body_content">
                             <p>
-                                XMAS standalone installation for MAC OS X is divided into three main steps:
+                                XMAS standalone installation for MAC OS X is divided into four main steps:
                             </p>
                             <b><ul>
+                                <li>Download Installation package</li>
                                 <li>Installing supporting applications</li>
                                 <li>Configuring environment for XMAS</li>
                                 <li>Load dataset and run XMAS</li>
@@ -43,6 +44,10 @@
                             <p>
                                 <span style="text-align:justify;">
                                 <h2><span style="font-size:18px;">Installing supporting applications</span></h2>
+                                <b>Please watch the following "How-To" video guide. It contains all the steps necessary to install supporting appliactions.</b>
+                                <p style="margin-left: 40px;" class="block_summary">
+                                    <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/qII7f1G0CFE&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/qII7f1G0CFE&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+                                </p>
                                 <ol>
                                     <li>
                                         Update JAVA
@@ -128,6 +133,10 @@
                             </p>
                             <p>
                                 <h2><span style="font-size:18px;">Configuring environment for XMAS</span></h2>
+                                <b>Please watch the following "How-To" video guide. It contains all the steps necessary to configure the environment for XMAS.</b>
+                                <p style="margin-left: 40px;" class="block_summary">
+                                    <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/8WC2WCgaiME&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/8WC2WCgaiME&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+                                </p>
                                 <ol>
                                     <li>
                                         Download the installation package <a target="_blank" href="http://tintin.sfsu.edu:8080/xmas_downloads/mac.zip">here</a>
@@ -201,10 +210,11 @@
                             </p>
                             <p>
                                 <h2><span style="font-size:18px;">Load dataset and Run XMAS</span></h2>
+                                <b>Please watch the following "How-To" video guide. It contains all the steps necessary to load a dataset and Run XMAS.</b>
+                                <p style="margin-left: 40px;" class="block_summary">
+                                    <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/laPWZkp0MJ8&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/laPWZkp0MJ8&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+                                </p>
                                 <ol>
-                                    <li>
-                                        Please watch the following "How-To" video guide. It contains all the steps necessary to Load a dataset and Run XMAS.                                        
-                                    </li>
                                     <li>
                                         For the Data Directory path under Load Data > System Setup, please enter the following path:
                                         <ul>
@@ -214,9 +224,6 @@
                                         </ul>
                                     </li>
                                 </ol>
-                                <p style="margin-left: 40px;" class="block_summary">
-                                    <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/laPWZkp0MJ8&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/laPWZkp0MJ8&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
-                                </p>
                             </p>
                         </div>
                     </div>

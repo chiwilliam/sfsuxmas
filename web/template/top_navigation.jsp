@@ -78,7 +78,7 @@
     }
     .web_demo_version{
         float:left;
-        margin-left:205px;
+        margin-left:206px;
         margin-top:17px;
         height:30px;
         color:white;
@@ -199,10 +199,16 @@
                    title="Help - Local Install for Linux">Linux</a>
             </li>
             <li>
-                <a href="../help/local_install_mac.jsp"
-                   id="top_sub_nav_local_install_mac"
-                   alt="Help - Local Install for Mac OS"
-                   title="Help - Local Install for Mac OS">Mac OS X</a>
+                <a href="../help/local_install_mac_32bit.jsp"
+                   id="top_sub_nav_local_install_mac_32bit"
+                   alt="Help - Local Install for Mac OS 32-bit"
+                   title="Help - Local Install for Mac OS 32-bit">Mac OS X (32-bit)</a>
+            </li>
+            <li>
+                <a href="../help/local_install_mac_64bit.jsp"
+                   id="top_sub_nav_local_install_mac_64bit"
+                   alt="Help - Local Install for Mac OS 64-bit"
+                   title="Help - Local Install for Mac OS 64-bit">Mac OS X (64-bit)</a>
             </li>
             <li>
                 <a href="../help/data_guides.jsp"
