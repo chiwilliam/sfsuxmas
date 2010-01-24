@@ -43,22 +43,17 @@
 
                             <p>
                             <ul>
-                                <li>Tutorial 1: <a href="time_period_differential_expression.jsp">Exposing Differential Expression within a given Time Period</a></li>
-                                <li>Tutorial 2: <a href="surfacing_dynamic_expression_profiles.jsp">Surfacing Dynamic Expression Profiles</a></li>
-                                <li>Tutorial 3: <a href="cross_data_set_feature_analysis.jsp">Cross Data Set Feature Analysis</a></li>
+                                <li>Tutorial 1: <a href="../tutorials/time_period_differential_expression.jsp">Exposing Differential Expression within a given Time Period</a></li>
+                                <li>Tutorial 2: <a href="../tutorials/surfacing_dynamic_expression_profiles.jsp">Surfacing Dynamic Expression Profiles</a></li>
+                                <li>Tutorial 3: <a href="../tutorials/cross_data_set_feature_analysis.jsp">Cross Data Set Feature Analysis</a></li>
+                                <li>Tutorial 4: <a href="../tutorials/tutorial_1.jsp">Exposing pathway involvement based on expression characteristics</a></li>
                             </ul>
                             </p>
 
-                            <h2>Detailed Case Studies</h2>
+                            <h2>Case Study Videos</h2>
 
-                            <h3>NEW: Video Case Studies</h3>
                             <p>
                                 We have put together a number of <a href="../home/videos.jsp">XMAS Case Study Videos</a> that we hope will provide a better insight into the intricacies of the system than static screen shots and textual descriptions.
-                            </p>
-
-                            <h3>Exposing Calcium Regulation At Term</h3>
-                            <p>
-                                This simple tutorial demonstrates some of XMAS' core functionality, en-route to a non-trivial discovery. View the <a href="../tutorials/tutorial_1.jsp">Tutorial</a>
                             </p>
 
                         </div>
