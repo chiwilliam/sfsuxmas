@@ -36,8 +36,8 @@
                                 XMAS standalone installation is divided into three main steps:
                             </p>
                             <ol>
-                                <li>Watch the "how-to" installation video</li>
                                 <li>Download Installation Package</li>
+                                <li>Watch the "how-to" installation video</li>
                                 <li>Install XMAS, following the steps presented in the "how-to" video</li>
                             </ol>
                             <p>
@@ -60,7 +60,6 @@
                                     <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/VGKZDAPVsI8&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/VGKZDAPVsI8&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
                                 </p>
                             </div>                         
-
                         </div>
                     </div>
                 </div>
