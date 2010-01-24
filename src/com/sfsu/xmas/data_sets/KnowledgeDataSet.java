@@ -71,6 +71,7 @@ public class KnowledgeDataSet extends AbstractDataSet {
         dataAccess.removeProbeUserNote(probeID);
     }
 
+    @Override
     public synchronized void populateBasicData() {
         this.name = dataAccess.getName();
         this.description = dataAccess.getDescription();
@@ -82,6 +83,7 @@ public class KnowledgeDataSet extends AbstractDataSet {
         isFresh = true;
     }
 
+    @Override
     public synchronized void populateFully() {
         if (probeDataTypes == null) {
             this.probeDataTypes = dataAccess.getProbeAttributes();

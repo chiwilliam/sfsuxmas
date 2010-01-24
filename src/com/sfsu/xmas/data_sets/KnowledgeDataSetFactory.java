@@ -24,6 +24,7 @@ public class KnowledgeDataSetFactory implements IDataSetFactory {
         uniqueInstance = new KnowledgeDataSetFactory();
     }
 
+    @Override
     public synchronized KnowledgeDataSet getDataSet(int dataSetID, boolean populateFully) {
         if (!dataSets.keySet().contains(dataSetID) || !dataSets.get(dataSetID).isFresh()) {
             dataSets.put(dataSetID, new KnowledgeDataSet(dataSetID, populateFully));
@@ -54,10 +55,12 @@ public class KnowledgeDataSetFactory implements IDataSetFactory {
         return false;
     }
 
+    @Override
     public int getNumberOfDataSets() {
         return dataSets.size();
     }
 
+    @Override
     public HashMap<Integer, KnowledgeDataSet> getDataSets() {
         return dataSets;
     }
