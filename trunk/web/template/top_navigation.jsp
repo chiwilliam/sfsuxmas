@@ -100,7 +100,7 @@
 %>
 <div id="header_container">
     <div class="header">
-        <span class="web_demo_version"><img id="webdemoversion" title="Web-Demo Version" alt="Web-Demo Version" src="../resources/images/webdemoversion.gif" /></span>
+        <!--<span class="web_demo_version"><img id="webdemoversion" title="Web-Demo Version" alt="Web-Demo Version" src="../resources/images/webdemoversion.gif" /></span>-->
         <a href="../home/">
             <img src="../resources/images/xmas_logo.png" class="main_logo" alt="XMAS Logo" title="XMAS Logo" />
         </a>
