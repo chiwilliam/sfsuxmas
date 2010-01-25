@@ -78,11 +78,12 @@
     }
     .web_demo_version{
         float:left;
+        /*margin-left:210px;*/
         margin-left:206px;
         margin-top:17px;
         height:30px;
         color:white;
-        width:150px;
+        width:170px;
         text-align:center;
     }
     .header_footer {
