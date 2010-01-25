@@ -91,12 +91,6 @@
                             </ol>
                             </p>
 
-                            <h3>Summary</h3>
-
-                            <p>
-                                TODO
-                            </p>
-
                             <div style="text-align: center;">
                                 <iframe src='http://docs.google.com/EmbedSlideshow?docid=dgvwz2vs_354f6rgmtft&amp;size=l' frameborder='0' width='700' height='559'></iframe>
                             </div>
