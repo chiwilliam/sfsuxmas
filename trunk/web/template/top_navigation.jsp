@@ -83,7 +83,8 @@
         margin-top:17px;
         height:30px;
         color:white;
-        width:170px;
+        /*width:150px;*/
+        width:150px;
         text-align:center;
     }
     .header_footer {
