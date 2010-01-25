@@ -61,7 +61,16 @@
                                 </p>
                             </div>
 
-                        </div>
+                            <div style="clear: both;">
+                                <h3>Increasing system memory available for XMAS</h3>
+                                <p style="color:red;font-weight:bold;">
+                                    Reproduce the steps demonstrated in this video to avoid OutOfMemory exceptions while loading large datasets on XMAS.
+                                    <br></br>
+                                </p>
+                                <p class="block_summary">
+                                    <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/iwnjz52OmNw&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/iwnjz52OmNw&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+                                </p>
+                            </div>
                     </div>
                 </div>
             </div>
