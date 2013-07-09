@@ -26,24 +26,22 @@ public class FileGlobals {
     public static final String KNOWLEDGE_DATABASE = "xmas";
     
     // Prod
-    public static String DB_PROFILE = "xmas";
-
-    private static String FILE_ROOT = "undefined";
-
-    public static final String PASS = "xmas9thfloor";
-    public static final boolean SINGLE_DATASET = false;
+//    public static String DB_PROFILE = "xmas";
+//    private static String FILE_ROOT = "undefined";
+//    public static final String PASS = "xmas9thfloor";
+//    public static final boolean SINGLE_DATASET = false;
     
-    // Dev
+//    Dev
 //    public static final String DB_PROFILE = "xmas_dev";
 //    private static String FILE_ROOT = "/Users/bdalziel/Documents/xmas_files/";
 //    public static final String PASS = "xmas9thfloor";
 //    public static final boolean SINGLE_DATASET = true;
     
     // Local
-//    public static String DB_PROFILE = "xmas_dev";
-//    private static String FILE_ROOT = "/Users/your_name/Documents/xmas_files/";
-//    public static final String PASS = "xmas";
-//    public static final boolean SINGLE_DATASET = true;
+    public static String DB_PROFILE = "xmas_da";
+    private static String FILE_ROOT = "/home/da/Documents/IDEAProjects/XMAS/xmas_files/";
+    public static final String PASS = "";
+    public static final boolean SINGLE_DATASET = true;
     
     public static String getActiveRoot() {
 
