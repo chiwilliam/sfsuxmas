@@ -167,3 +167,18 @@ function get_checked_trajectories ( max ) {
     }
     return checkedBoxes;
 }
+
+
+function compute_clusters() {
+//    traj_loading_image();
+    var k = document.getElementById("cluster_k").getAttribute("value");
+    k = parseInt(k,10);
+
+    var xhr = getRequest();
+    xhr.onreadystatechange = function() {
+
+    }
+    var url = "";
+    xhr.open("GET".url,true);
+    xhr.send(null);
+}
