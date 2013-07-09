@@ -1,32 +1,35 @@
 package com.sfsu.xmas.dao;
 
-import com.sfsu.xmas.trajectory_files.*;
 import com.sfsu.xmas.data_sets.ExpressionDataSetMultiton;
-import com.sfsu.xmas.filter.IFilter;
 import com.sfsu.xmas.filter.FilterList;
 import com.sfsu.xmas.filter.FilterManager;
+import com.sfsu.xmas.filter.IFilter;
 import com.sfsu.xmas.globals.FileGlobals;
+import com.sfsu.xmas.monitoring.ExecutionTimer;
+import com.sfsu.xmas.session.SessionAttributeManager;
+import com.sfsu.xmas.trajectory_files.LeafNodes;
+import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
+import com.sfsu.xmas.trajectory_files.TrajectoryNode;
 import filter.TrajNodeFilter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.TreeMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import filter.TrajectoryShapeFilter;
+import org.apache.xerces.parsers.DOMParser;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-import com.sfsu.xmas.monitoring.ExecutionTimer;
-import com.sfsu.xmas.session.SessionAttributeManager;
-import filter.TrajectoryShapeFilter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import org.apache.xerces.parsers.DOMParser;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.TreeMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class TrajectoryFileDAO extends XMLFileDAO {
 
@@ -147,6 +150,31 @@ public class TrajectoryFileDAO extends XMLFileDAO {
                 HashMap<Integer, TrajectoryNode> otherWithSameVol = new HashMap<Integer, TrajectoryNode>();
                 otherWithSameVol.put(tn.getID(), tn);
                 ordered.put(vol, otherWithSameVol);
+            }
+
+        }
+
+        TreeMap<Integer, HashMap<Integer, TrajectoryNode>> tm = new TreeMap<Integer, HashMap<Integer, TrajectoryNode>>(ordered);
+
+        return tm;
+    }
+
+    public synchronized  TreeMap<Integer, HashMap<Integer, TrajectoryNode>> getTrajectoriesByProbeIds(String identifier, int[] probeIds) {
+        //TODO figure this out!
+        LeafNodes trajectories = getLeafNodes(identifier);
+
+        HashMap<Integer, HashMap<Integer, TrajectoryNode>> ordered = new HashMap<Integer, HashMap<Integer, TrajectoryNode>>();
+
+        for (int i = 0; i < trajectories.size(); i++) {
+            TrajectoryNode tn = trajectories.get(i);
+            int vol = 0;
+            if (ordered.containsKey(vol)) {
+                HashMap<Integer, TrajectoryNode> nodeMap = ordered.get(vol);
+                nodeMap.put(tn.getID(), tn);
+            } else {
+                HashMap<Integer, TrajectoryNode> nodeMap = new HashMap<Integer, TrajectoryNode>();
+                nodeMap.put(tn.getID(), tn);
+                ordered.put(vol, nodeMap);
             }
 
         }
