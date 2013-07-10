@@ -1,10 +1,8 @@
 package k_means;
 
 import com.sfsu.xmas.data_sets.ExpressionDataSet;
-import com.sfsu.xmas.data_sets.ExpressionDataSetMultiton;
 import com.sfsu.xmas.data_structures.Probe;
 import com.sfsu.xmas.data_structures.Probes;
-import com.sfsu.xmas.filter.FilterManager;
 import com.sfsu.xmas.session.SessionAttributeManager;
 import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
 import org.apache.commons.math3.stat.StatUtils;
@@ -37,10 +35,10 @@ public class ClusterService {
         trajFN = SessionAttributeManager.getActiveTrajectoryFile(request).getFileName();
         expressionValueRows = new ArrayList<double[]>(eDB.getNumberOfProbes());
         probeIndexId = new LinkedHashMap<Integer, String>(eDB.getNumberOfProbes());
-        populateExpressionValues(identifier);
+        populateExpressionValues();
     }
 
-    public synchronized Probes getProbes(String identifier) {
+    /*public synchronized Probes getProbes(String identifier) {
         Probes probes;
         if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && FilterManager.getUniqueInstance().getFilterListForIdentifier(identifier).hasTrajFileBasedFilters()) {
             probes = ExpressionDataSetMultiton.getUniqueInstance().getDataSet(eDBID, false).getProbes(TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).getProbes(identifier), true);
@@ -48,10 +46,11 @@ public class ClusterService {
             probes = ExpressionDataSetMultiton.getUniqueInstance().getDataSet(eDBID, false).getProbes(identifier, true);
         }
         return probes;
-    }
+    }*/
 
-    public void populateExpressionValues(String identifier) {
-        Probes probes = getProbes(identifier);
+    public void populateExpressionValues() {
+//        Probes probes = getProbes(identifier);
+        Probes probes = eDB.getProbes();
         int idx = 0;
         for (Map.Entry<String, Probe> entry : probes.entrySet()) {
             double[] timePeriodExpression = entry.getValue().getTimePeriodExpression();
