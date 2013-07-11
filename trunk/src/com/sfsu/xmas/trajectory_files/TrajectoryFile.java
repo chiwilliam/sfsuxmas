@@ -1,13 +1,14 @@
 package com.sfsu.xmas.trajectory_files;
 
-import com.sfsu.xmas.dao.TrajectoryFileDAO;
 import com.sfsu.xmas.dao.DAOFactoryFactory;
+import com.sfsu.xmas.dao.TrajectoryFileDAO;
 import com.sfsu.xmas.filter.IFilter;
 import com.sfsu.xmas.globals.FileGlobals;
+import org.w3c.dom.NodeList;
+
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.TreeMap;
-import javax.servlet.http.HttpServletRequest;
-import org.w3c.dom.NodeList;
 
 public class TrajectoryFile {
 
@@ -43,6 +44,10 @@ public class TrajectoryFile {
         return dataAccess.getBinUnit();
     }
 
+    public int getK() {
+        return dataAccess.getK();
+    }
+
     public int getNumberOfNodes() {
         return nodeCount;
     }
@@ -68,7 +73,15 @@ public class TrajectoryFile {
     }
 
     public boolean isPreserved() {
-        return !getFileName().endsWith(FileGlobals.COLLAPSED_POSTFIX);
+        return !getFileName().endsWith(FileGlobals.COLLAPSED_POSTFIX) && !isClustered();
+    }
+
+    public boolean isCollapsed() {
+        return getFileName().endsWith(FileGlobals.COLLAPSED_POSTFIX) && !isClustered();
+    }
+
+    public boolean isClustered() {
+        return getFileName().contains(FileGlobals.CLUSTERED_INFIX);
     }
 
     /**
