@@ -9,6 +9,7 @@ public class FileGlobals {
     private static String EXPRESSION_DATA_SUB_DIR = "xd_expression" + File.separatorChar;
     private static String KNOWLEDGE_SUB_DIR = "xd_knowledge" + File.separatorChar;
     public static final String COLLAPSED_POSTFIX = "_collapsed";
+    public static final String CLUSTERED_INFIX = "_kmeans";
 //    public static final String DATABASE_PREFIX = "xmas_";
     public static final String KNOWLEDGE_DATABASE_PREFIX = "xmas_lib_";
     public static final String ANALYSIS_CAPTURE_PREFIX = "acap_";
