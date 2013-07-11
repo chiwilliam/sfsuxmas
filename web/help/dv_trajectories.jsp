@@ -87,7 +87,6 @@
                                             Volatility and linear trend can be applied to both discretized trajectories and expression profiles.
                                         </p>
                                     </li>
-                                    <%--TODO add k-means here--%>
                                 </ul>
                                 <p>
                                     These measures are used to rank trajectories from the current analysis - the user can choose which measure to focus on using the buttons in the top right of the Trajectories Data View. 
