@@ -1,16 +1,16 @@
 package com.sfsu.xmas.trajectory_files;
 
-import com.sfsu.xmas.globals.FileGlobals;
 import com.sfsu.xmas.servlet.MsgTemplates;
 import com.sfsu.xmas.session.SessionAttributeManager;
 import com.sfsu.xmas.session.SessionAttributes;
 import com.sfsu.xmas.session.YearLongCookie;
-import java.io.IOException;
-import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class SLoadTrajectoryFile extends HttpServlet {
 
@@ -34,8 +34,12 @@ public class SLoadTrajectoryFile extends HttpServlet {
                 response.addCookie(new YearLongCookie(SessionAttributes.TRAJECTORY_FILE_NAME, fileName));
                 
                 // Determine if it's preserved or not.
-                boolean preserved = !fileName.endsWith(FileGlobals.COLLAPSED_POSTFIX);
+//                boolean preserved = !fileName.endsWith(FileGlobals.COLLAPSED_POSTFIX);
+//                boolean clustered = !fileName.contains(FileGlobals.CLUSTERED_INFIX);
+                boolean preserved = trajectoryFile.isPreserved();
+                boolean clustered = trajectoryFile.isClustered();
                 response.addCookie(new YearLongCookie(SessionAttributes.PRESERVED, String.valueOf(preserved)));
+                response.addCookie(new YearLongCookie(SessionAttributes.CLUSTERED, String.valueOf(clustered)));
                 out.write(MsgTemplates.getSuccess("Trajectory file (\"" + fileName + "\") loaded"));
             } else {
                 out.write(MsgTemplates.getError("Trajectory file (\"" + fileName + "\") does not exist"));
