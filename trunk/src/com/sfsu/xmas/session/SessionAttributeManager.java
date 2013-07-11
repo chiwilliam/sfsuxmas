@@ -39,6 +39,17 @@ public class SessionAttributeManager {
         }
     }
 
+    public static boolean isClustered(HttpServletRequest request) {
+        String cookieKey = SessionAttributes.CLUSTERED;
+        Cookie cookie = ServletUtil.getCookieFromKey(request, cookieKey);
+        if (cookie != null) {
+            return Boolean.valueOf(cookie.getValue());
+        } else {
+            // Not set - default value
+            return true;
+        }
+    }
+
     public static boolean isComparative(HttpServletRequest request) {
         String cookieKey = SessionAttributes.IMAGE_TYPE_COMPARATIVE;
         Cookie cookie = ServletUtil.getCookieFromKey(request, cookieKey);
