@@ -38,6 +38,7 @@ public class TrajectoryFileDAO extends XMLFileDAO {
     private int subtractiveDegreeMin;
     private int subtractiveDegreeMax;
     private double binUnit;
+    private int k;
     private int[][] maxTrajectories;
 //    private Document doc;
     public TrajectoryFileDAO(String name, int parentDB) {
@@ -46,6 +47,7 @@ public class TrajectoryFileDAO extends XMLFileDAO {
         subtractiveDegreeMax = getXpathInteger("//FileSummary/SubtractiveDegree/@Max");
         subtractiveDegreeMin = getXpathInteger("//FileSummary/SubtractiveDegree/@Min");
         binUnit = getXpathDouble("//FileSummary/BinUnit/@Value");
+        k = getXpathInteger("//FileSummary/K/@Value");
     }
 
     public String getDisplayName() {
@@ -65,6 +67,10 @@ public class TrajectoryFileDAO extends XMLFileDAO {
 
     public double getBinUnit() {
         return binUnit;
+    }
+
+    public int getK() {
+        return k;
     }
 
     public boolean isPreserved() {
