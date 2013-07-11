@@ -11,10 +11,15 @@ import com.sfsu.xmas.session.SessionAttributeManager;
 import com.sfsu.xmas.session.SessionAttributes;
 import com.sfsu.xmas.session.YearLongCookie;
 import com.sfsu.xmas.trajectory_files.TrajectoryFile;
-import java.io.*;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  *
@@ -34,8 +39,6 @@ public class SVisualizationManipulator extends HttpServlet {
 //        response.setContentType("image/png");
 
         HttpSession session = request.getSession(true);
-
-        boolean propSet;
         
         // Clear image key
         response.addCookie(new EatenCookie(SessionAttributes.IMAGE_MAP_KEY, ""));
@@ -43,20 +46,35 @@ public class SVisualizationManipulator extends HttpServlet {
         /*
          * Data collapse operator
          */
-        propSet = !(request.getParameter(SessionAttributes.PRESERVED) == null);
-        if (propSet) {
+        boolean propSet = !(request.getParameter(SessionAttributes.PRESERVED) == null);
+        boolean clustSet = !(request.getParameter(SessionAttributes.CLUSTERED) == null);
+
+        if (propSet && clustSet) {
+            boolean clustered = Boolean.valueOf(request.getParameter(SessionAttributes.CLUSTERED));
             boolean preserved = Boolean.valueOf(request.getParameter(SessionAttributes.PRESERVED));
             response.addCookie(new YearLongCookie(SessionAttributes.PRESERVED, String.valueOf(preserved)));
+            response.addCookie(new YearLongCookie(SessionAttributes.CLUSTERED, String.valueOf(clustered)));
             TrajectoryFile td = SessionAttributeManager.getActiveTrajectoryFile(request);
             if (td != null) {
                 // File active, switch to the correct version:
                 String currentFileName = td.getFileName();
-                if (td.isPreserved() && !preserved) {
-                    // Currently preserved - collapse
-                    response.addCookie(new YearLongCookie(SessionAttributes.TRAJECTORY_FILE_NAME, currentFileName + FileGlobals.COLLAPSED_POSTFIX));
-                } else if (!td.isPreserved() && preserved) {
-                    // Currently collapsed - preserve
-                    response.addCookie(new YearLongCookie(SessionAttributes.TRAJECTORY_FILE_NAME, currentFileName.substring(0, currentFileName.length() - FileGlobals.COLLAPSED_POSTFIX.length())));
+                String bareFileName = null;
+                if (td.isPreserved()) bareFileName = currentFileName;
+                if (td.isCollapsed()) bareFileName = currentFileName.substring(0, currentFileName.length() - FileGlobals.COLLAPSED_POSTFIX.length());
+                if (td.isClustered()) bareFileName = currentFileName.substring(0, currentFileName.length() - (FileGlobals.CLUSTERED_INFIX + td.getK()).length());
+
+
+                if (!td.isClustered() && clustered) {
+                    // currently preserved or collapsed - clustered
+                    response.addCookie(new YearLongCookie(SessionAttributes.TRAJECTORY_FILE_NAME, bareFileName + FileGlobals.CLUSTERED_INFIX + td.getK()));
+                }
+                if (!td.isPreserved() && preserved) {
+                    // Currently preserved or clustered - collapse
+                    response.addCookie(new YearLongCookie(SessionAttributes.TRAJECTORY_FILE_NAME, bareFileName));
+                }
+                if (!td.isCollapsed() && !preserved && !clustered) {
+                    // Currently collapsed or clustered - preserve
+                    response.addCookie(new YearLongCookie(SessionAttributes.TRAJECTORY_FILE_NAME, bareFileName + FileGlobals.COLLAPSED_POSTFIX));
                 }
             }
         }

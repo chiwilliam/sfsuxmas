@@ -1,26 +1,20 @@
 package visualization;
 
 import com.sfsu.xmas.data_sets.ExpressionDataSetMultiton;
-import com.sfsu.xmas.trajectory_files.LeafNodes;
 import com.sfsu.xmas.data_structures.Probes;
 import com.sfsu.xmas.data_structures.expression.TimePeriod;
 import com.sfsu.xmas.data_structures.expression.TimePeriods;
 import com.sfsu.xmas.filter.FilterManager;
 import com.sfsu.xmas.highlight.HighlightManager;
-import java.awt.AlphaComposite;
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Composite;
-import java.awt.Font;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.Stroke;
+import com.sfsu.xmas.trajectory_files.LeafNodes;
+import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
+
+import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.font.GlyphVector;
 import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import java.io.StringWriter;
-import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
 
 public abstract class AbstractViz implements IVisualization {
 
@@ -278,7 +272,7 @@ public abstract class AbstractViz implements IVisualization {
             double label = ((mMaxExpressionBinValue - i) + 1) * binUnit;
             String unitLabel = String.valueOf(label);
             int labelOffset = (int) Math.round((mVerticalBinSpacing * i) + vOffset + 4);
-            if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && !TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isPreserved()) {
+            if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isCollapsed()) {
                 // Collapsed, mess with scale
                 labelOffset = (int) Math.round(labelOffset - (mVerticalBinSpacing / 2));
             }

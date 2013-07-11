@@ -1,26 +1,28 @@
 package visualization;
 
 import com.sfsu.xmas.data_sets.ExpressionDataSetMultiton;
-import com.sfsu.xmas.trajectory_files.TrajectoryNode;
 import com.sfsu.xmas.data_structures.Probe;
 import com.sfsu.xmas.data_structures.Probes;
 import com.sfsu.xmas.filter.FilterManager;
 import com.sfsu.xmas.highlight.HighlightManager;
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map.Entry;
-import java.util.Set;
-import org.w3c.dom.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import com.sfsu.xmas.monitoring.ExecutionTimer;
+import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
+import com.sfsu.xmas.trajectory_files.TrajectoryNode;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-import com.sfsu.xmas.monitoring.ExecutionTimer;
-import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public abstract class AbstractPreciseViz extends AbstractViz {
 
@@ -140,7 +142,7 @@ public abstract class AbstractPreciseViz extends AbstractViz {
         double[] expressionValues = new double[timePeriodExpression.length];
 
         double profileShift = 0.0;
-        if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && !TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isPreserved()) {
+        if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isCollapsed()) {
             profileShift = TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).getCollapsedExpressionShiftAmount(timePeriodExpression);
             for (int i = 0; i < timePeriodExpression.length; i++) {
                 expressionValues[i] = timePeriodExpression[i] - profileShift;
@@ -189,12 +191,12 @@ public abstract class AbstractPreciseViz extends AbstractViz {
             Probe p = memberProbes.get(it.next());
             double[] pExp = p.getTimePeriodExpression();
             double profileShift = 0.0;
-            if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && !TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isPreserved()) {
+            if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isCollapsed()) {
                 profileShift = TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).getCollapsedExpressionShiftAmount(pExp);
             }
             for (int j = 0; j < pExp.length; j++) {
                 double expressionValue = pExp[j];
-                if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && !TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isPreserved()) {
+                if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isCollapsed()) {
                     expressionValue = expressionValue - profileShift;
                 }
                 expression[j] += expressionValue;
