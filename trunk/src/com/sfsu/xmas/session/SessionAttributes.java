@@ -12,6 +12,7 @@ public class SessionAttributes {
     public static final String DATABASE_ID = "database_id";
     public static final String TRAJECTORY_FILE_NAME = "trajectory_file";
     public static final String PRESERVED = "preserved";
+    public static final String CLUSTERED = "clustered";
     public static final String IMAGEMAP = "image_map";
     public static final String IMAGE = "image";
     public static final String IMAGE_MAP_KEY = "image_map_key";
