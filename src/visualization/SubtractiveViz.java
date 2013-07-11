@@ -1,14 +1,15 @@
 package visualization;
 
-import com.sfsu.xmas.data_structures.Probes;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.*;
 import com.sfsu.xmas.data_sets.ExpressionDataSetMultiton;
 import com.sfsu.xmas.data_structures.Probe;
+import com.sfsu.xmas.data_structures.Probes;
 import com.sfsu.xmas.highlight.HighlightManager;
 import com.sfsu.xmas.monitoring.ExecutionTimer;
 import com.sfsu.xmas.trajectory_files.TrajectoryFileFactory;
+
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map.Entry;
@@ -147,7 +148,7 @@ public class SubtractiveViz extends AbstractPreciseViz {
         double[] expressionValues = new double[timePeriodExpression.length];
 
         double profileShift = 0.0;
-        if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && !TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isPreserved()) {
+        if (TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN) != null && TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).isCollapsed()) {
             profileShift = TrajectoryFileFactory.getUniqueInstance().getFile(eDBID, trajFN).getCollapsedExpressionShiftAmount(timePeriodExpression);
             for (int i = 0; i < timePeriodExpression.length; i++) {
                 expressionValues[i] = timePeriodExpression[i] - profileShift;
