@@ -20,6 +20,11 @@
                 double range = (int) maxBin - minBin;
                 String fmt = "0.00#";
                 DecimalFormat df = new DecimalFormat(fmt);
+
+              int probeCount = activeDatabase.getNumberOfProbes();
+              int defaultK = probeCount / 30;
+              int maxK = probeCount / 2;
+
 %>
 <p>
     <%
@@ -50,10 +55,13 @@
                         rowClass = "even";
                     }
                     String presCol = "Preserved";
-                    if (!currentTD.isPreserved()) {
+                    if (currentTD.isCollapsed()) {
                         presCol = "Collapsed";
                     }
-
+                    if (currentTD.isClustered()) {
+                      int k = currentTD.getK();
+                      presCol = "K-Means " + "(" + k + ")";
+                    }
 
                     boolean isActiveDB = (trajFile != null && currentTD.getFileName().equals(trajFile.getFileName()));
                     String highlight = "";
@@ -144,6 +152,13 @@
                                                         onblur="updateBinUnit(<%= Math.ceil(range)%>);" 
                                                         onselect="updateBinUnit(<%= Math.ceil(range)%>);" 
                                                     onchange="updateBinUnit(<%= Math.ceil(range)%>);" /> - Use this number to customize your trajectory file</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Clusters</td><td><input id="kmeansk" name="kmeansk" type="text" size="5" value="<%= defaultK%>"
+                                                        onfocus="updateK(<%= maxK%>);"
+                                                        onblur="updateK(<%= maxK%>);"
+                                                        onselect="updateK(<%= maxK%>);"
+                                                    onchange="updateK(<%= maxK%>);" /> - Use this number to customize your trajectory file</td>
                     </tr>
                 </tbody>
             </table>

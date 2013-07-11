@@ -131,6 +131,13 @@ function updateBinUnit(expressionRange) {
     
 }
 
+function updateK(maxK) {
+    var k = document.getElementById("kmeansk");
+    if (parseInt(k.value) > maxK) {
+        k.value = maxK;
+    }
+}
+
 function load_file(fileName) {
     loading();
     var xhr = getRequest();
