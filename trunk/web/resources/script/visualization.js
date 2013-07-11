@@ -24,6 +24,9 @@ function image_type_switch(url, button_name, loading) {
                     document.getElementById('button_preserved').disabled = false;
                     document.getElementById('button_preserved').style.cursor = 'pointer';
                     document.getElementById('button_preserved').style.cursor = 'hand';
+                    document.getElementById('button_clustered').disabled = false;
+                    document.getElementById('button_clustered').style.cursor = 'pointer';
+                    document.getElementById('button_clustered').style.cursor = 'hand';
                     document.getElementById('button_' + button_name).disabled = true;
                     document.getElementById('button_' + button_name).style.cursor = '';
                     document.getElementById('button_' + button_name).style.cursor = '';

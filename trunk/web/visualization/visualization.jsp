@@ -85,29 +85,45 @@
                             Preserved/Collapsed Buttons
                             
                             -->
-                            <%
-            String preserved = " disabled";
-            String collapsed = " style=\"cursor: pointer; cursor: hand;\" ";
-            if (!SessionAttributeManager.isPreserved(request)) {
-                preserved = collapsed;
-                collapsed = " disabled";
+            <%
+            String disabled = " disabled";
+            String active = " style=\"cursor: pointer; cursor: hand;\" ";
+            String preserved = disabled;
+            String collapsed = active;
+            String clustered = active;
+            if (SessionAttributeManager.isClustered(request)) {
+              clustered = disabled;
+              preserved = active;
+              collapsed = active;
             }
-            String profTraj = "Profiles";
+
+            if (!SessionAttributeManager.isPreserved(request) && !SessionAttributeManager.isClustered(request)) {
+                clustered = active;
+                preserved = active;
+                collapsed = disabled;
+            }
+            /*String profTraj = "Profiles";
             if (SessionAttributeManager.isTrajectoryVisualization(request)) {
                 profTraj = "Trajectories";
-            }
+            }*/
                             %>
                             <input type="button" <%= preserved%> 
-                                   onclick="image_type_switch('../SVisualizationManipulator?preserved=true', 'preserved');" 
+                                   onclick="image_type_switch('../SVisualizationManipulator?preserved=true&clustered=false', 'preserved');"
                                    id="button_preserved" 
-                                   value="Preserve <%= profTraj%>" 
+                                   value="Preserved"
                                    alt="Preserves the expression magnitude of data under analysis" 
                                    title="Preserves the expression magnitude of data under analysis" />
                             <input type="button" <%= collapsed%> 
-                                   onclick="image_type_switch('../SVisualizationManipulator?preserved=false', 'collapsed');" 
+                                   onclick="image_type_switch('../SVisualizationManipulator?preserved=false&clustered=false', 'collapsed');"
                                    id="button_collapsed" 
-                                   value="Collapse <%= profTraj%>" 
+                                   value="Collapsed"
                                    alt="Vertically translates the data under analysis to the same origin" 
+                                   title="Vertically translates the data under analysis to the same origin" />
+                          <input type="button" <%= clustered%>
+                                   onclick="image_type_switch('../SVisualizationManipulator?preserved=false&clustered=true', 'clustered');"
+                                   id="button_clustered"
+                                   value="Clustered"
+                                   alt="Vertically translates the data under analysis to the same origin"
                                    title="Vertically translates the data under analysis to the same origin" />
                         </div>
                         
