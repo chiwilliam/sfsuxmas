@@ -97,6 +97,12 @@
               collapsed = active;
             }
 
+            if (SessionAttributeManager.isPreserved(request)) {
+              clustered = active;
+              preserved = disabled;
+              collapsed = active;
+            }
+
             if (!SessionAttributeManager.isPreserved(request) && !SessionAttributeManager.isClustered(request)) {
                 clustered = active;
                 preserved = active;
